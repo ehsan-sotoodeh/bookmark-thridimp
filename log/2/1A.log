@@ -1,0 +1,96 @@
+script.js:141 >>null
+script.js:328 0:
+script.js:659 1 #subjectId: 1 #interfaceNumber: simple10 #block:1 #trail: 1 #targetId: 0 #completed: true #eventType: click #eventTarget: 0 #timeLength: 3609 #now: 1510007470140<br/>
+script.js:714 nextTarget: 7
+script.js:659 2 #subjectId: 1 #interfaceNumber: simple10 #block:1 #trail: 2 #targetId: 7 #completed: true #eventType: click #eventTarget: 7 #timeLength: 3576 #now: 1510007474930<br/>
+script.js:714 nextTarget: 4
+script.js:659 3 #subjectId: 1 #interfaceNumber: simple10 #block:1 #trail: 3 #targetId: 4 #completed: true #eventType: click #eventTarget: 4 #timeLength: 1857 #now: 1510007477875<br/>
+script.js:714 nextTarget: 5
+script.js:659 4 #subjectId: 1 #interfaceNumber: simple10 #block:1 #trail: 4 #targetId: 5 #completed: false #eventType: click #eventTarget: 3 #timeLength: 2857 #now: 1510007481731<br/>
+script.js:659 5 #subjectId: 1 #interfaceNumber: simple10 #block:1 #trail: 4 #targetId: 5 #completed: false #eventType: click #eventTarget: 2 #timeLength: 3840 #now: 1510007485571<br/>
+script.js:659 6 #subjectId: 1 #interfaceNumber: simple10 #block:1 #trail: 4 #targetId: 5 #completed: true #eventType: click #eventTarget: 5 #timeLength: 3312 #now: 1510007488883<br/>
+script.js:714 nextTarget: 6
+script.js:659 7 #subjectId: 1 #interfaceNumber: simple10 #block:1 #trail: 5 #targetId: 6 #completed: true #eventType: click #eventTarget: 6 #timeLength: 2200 #now: 1510007492370<br/>
+script.js:714 nextTarget: 8
+script.js:659 8 #subjectId: 1 #interfaceNumber: simple10 #block:1 #trail: 6 #targetId: 8 #completed: true #eventType: click #eventTarget: 8 #timeLength: 2944 #now: 1510007496450<br/>
+script.js:714 nextTarget: 1
+script.js:659 9 #subjectId: 1 #interfaceNumber: simple10 #block:1 #trail: 7 #targetId: 1 #completed: true #eventType: click #eventTarget: 1 #timeLength: 3568 #now: 1510007501539<br/>
+script.js:714 nextTarget: 9
+script.js:659 10 #subjectId: 1 #interfaceNumber: simple10 #block:1 #trail: 8 #targetId: 9 #completed: true #eventType: click #eventTarget: 9 #timeLength: 2633 #now: 1510007505499<br/>
+script.js:714 nextTarget: 3
+script.js:659 11 #subjectId: 1 #interfaceNumber: simple10 #block:1 #trail: 9 #targetId: 3 #completed: false #eventType: click #eventTarget: 2 #timeLength: 1825 #now: 1510007508235<br/>
+script.js:659 12 #subjectId: 1 #interfaceNumber: simple10 #block:1 #trail: 9 #targetId: 3 #completed: true #eventType: click #eventTarget: 3 #timeLength: 1055 #now: 1510007509290<br/>
+script.js:714 nextTarget: 2
+script.js:659 13 #subjectId: 1 #interfaceNumber: simple10 #block:1 #trail: 10 #targetId: 2 #completed: true #eventType: click #eventTarget: 2 #timeLength: 3455 #now: 1510007513730<br/>
+script.js:760 8:
+script.js:659 14 #subjectId: 1 #interfaceNumber: simple10 #block:2 #trail: 1 #targetId: 8 #completed: true #eventType: click #eventTarget: 8 #timeLength: 5064 #now: 1510007520347<br/>
+script.js:714 nextTarget: 5
+script.js:659 15 #subjectId: 1 #interfaceNumber: simple10 #block:2 #trail: 2 #targetId: 5 #completed: true #eventType: click #eventTarget: 5 #timeLength: 4840 #now: 1510007526330<br/>
+script.js:714 nextTarget: 4
+script.js:659 16 #subjectId: 1 #interfaceNumber: simple10 #block:2 #trail: 3 #targetId: 4 #completed: true #eventType: click #eventTarget: 4 #timeLength: 1736 #now: 1510007529026<br/>
+script.js:714 nextTarget: 7
+script.js:659 17 #subjectId: 1 #interfaceNumber: simple10 #block:2 #trail: 4 #targetId: 7 #completed: true #eventType: click #eventTarget: 7 #timeLength: 4889 #now: 1510007534843<br/>
+script.js:714 nextTarget: 6
+script.js:659 18 #subjectId: 1 #interfaceNumber: simple10 #block:2 #trail: 5 #targetId: 6 #completed: false #eventType: click #eventTarget: 8 #timeLength: 1920 #now: 1510007538202<br/>
+script.js:659 19 #subjectId: 1 #interfaceNumber: simple10 #block:2 #trail: 5 #targetId: 6 #completed: false #eventType: click #eventTarget: 5 #timeLength: 3881 #now: 1510007542083<br/>
+script.js:659 20 #subjectId: 1 #interfaceNumber: simple10 #block:2 #trail: 5 #targetId: 6 #completed: true #eventType: click #eventTarget: 6 #timeLength: 1512 #now: 1510007543595<br/>
+script.js:714 nextTarget: 1
+script.js:659 21 #subjectId: 1 #interfaceNumber: simple10 #block:2 #trail: 6 #targetId: 1 #completed: true #eventType: click #eventTarget: 1 #timeLength: 5016 #now: 1510007549698<br/>
+script.js:714 nextTarget: 9
+script.js:659 22 #subjectId: 1 #interfaceNumber: simple10 #block:2 #trail: 7 #targetId: 9 #completed: true #eventType: click #eventTarget: 9 #timeLength: 2257 #now: 1510007552971<br/>
+script.js:714 nextTarget: 2
+script.js:659 23 #subjectId: 1 #interfaceNumber: simple10 #block:2 #trail: 8 #targetId: 2 #completed: true #eventType: click #eventTarget: 2 #timeLength: 2776 #now: 1510007556754<br/>
+script.js:714 nextTarget: 0
+script.js:659 24 #subjectId: 1 #interfaceNumber: simple10 #block:2 #trail: 9 #targetId: 0 #completed: true #eventType: click #eventTarget: 0 #timeLength: 1352 #now: 1510007559298<br/>
+script.js:714 nextTarget: 3
+script.js:659 25 #subjectId: 1 #interfaceNumber: simple10 #block:2 #trail: 10 #targetId: 3 #completed: true #eventType: click #eventTarget: 3 #timeLength: 1480 #now: 1510007561858<br/>
+script.js:760 0:
+script.js:659 26 #subjectId: 1 #interfaceNumber: simple10 #block:3 #trail: 1 #targetId: 0 #completed: true #eventType: click #eventTarget: 0 #timeLength: 1792 #now: 1510007564658<br/>
+script.js:714 nextTarget: 2
+script.js:659 27 #subjectId: 1 #interfaceNumber: simple10 #block:3 #trail: 2 #targetId: 2 #completed: true #eventType: click #eventTarget: 2 #timeLength: 2792 #now: 1510007568490<br/>
+script.js:714 nextTarget: 5
+script.js:659 28 #subjectId: 1 #interfaceNumber: simple10 #block:3 #trail: 3 #targetId: 5 #completed: false #eventType: click #eventTarget: 6 #timeLength: 2760 #now: 1510007572218<br/>
+script.js:659 29 #subjectId: 1 #interfaceNumber: simple10 #block:3 #trail: 3 #targetId: 5 #completed: true #eventType: click #eventTarget: 5 #timeLength: 1272 #now: 1510007573490<br/>
+script.js:714 nextTarget: 1
+script.js:659 30 #subjectId: 1 #interfaceNumber: simple10 #block:3 #trail: 4 #targetId: 1 #completed: true #eventType: click #eventTarget: 1 #timeLength: 1760 #now: 1510007576306<br/>
+script.js:714 nextTarget: 8
+script.js:659 31 #subjectId: 1 #interfaceNumber: simple10 #block:3 #trail: 5 #targetId: 8 #completed: true #eventType: click #eventTarget: 8 #timeLength: 2585 #now: 1510007580090<br/>
+script.js:714 nextTarget: 4
+script.js:659 32 #subjectId: 1 #interfaceNumber: simple10 #block:3 #trail: 6 #targetId: 4 #completed: true #eventType: click #eventTarget: 4 #timeLength: 1961 #now: 1510007583250<br/>
+script.js:714 nextTarget: 7
+script.js:659 33 #subjectId: 1 #interfaceNumber: simple10 #block:3 #trail: 7 #targetId: 7 #completed: false #eventType: click #eventTarget: 5 #timeLength: 4382 #now: 1510007588648<br/>
+script.js:659 34 #subjectId: 1 #interfaceNumber: simple10 #block:3 #trail: 7 #targetId: 7 #completed: false #eventType: click #eventTarget: 6 #timeLength: 1552 #now: 1510007590200<br/>
+script.js:659 35 #subjectId: 1 #interfaceNumber: simple10 #block:3 #trail: 7 #targetId: 7 #completed: true #eventType: click #eventTarget: 7 #timeLength: 1912 #now: 1510007592112<br/>
+script.js:714 nextTarget: 3
+script.js:659 36 #subjectId: 1 #interfaceNumber: simple10 #block:3 #trail: 8 #targetId: 3 #completed: true #eventType: click #eventTarget: 3 #timeLength: 1664 #now: 1510007594888<br/>
+script.js:714 nextTarget: 6
+script.js:659 37 #subjectId: 1 #interfaceNumber: simple10 #block:3 #trail: 9 #targetId: 6 #completed: true #eventType: click #eventTarget: 6 #timeLength: 2175 #now: 1510007598167<br/>
+script.js:714 nextTarget: 9
+script.js:659 38 #subjectId: 1 #interfaceNumber: simple10 #block:3 #trail: 10 #targetId: 9 #completed: true #eventType: click #eventTarget: 9 #timeLength: 2104 #now: 1510007601432<br/>
+script.js:760 5:
+script.js:659 39 #subjectId: 1 #interfaceNumber: simple10 #block:4 #trail: 1 #targetId: 5 #completed: true #eventType: click #eventTarget: 5 #timeLength: 2328 #now: 1510007604720<br/>
+script.js:714 nextTarget: 8
+script.js:659 40 #subjectId: 1 #interfaceNumber: simple10 #block:4 #trail: 2 #targetId: 8 #completed: false #eventType: click #eventTarget: 7 #timeLength: 1776 #now: 1510007607552<br/>
+script.js:659 41 #subjectId: 1 #interfaceNumber: simple10 #block:4 #trail: 2 #targetId: 8 #completed: true #eventType: click #eventTarget: 8 #timeLength: 1384 #now: 1510007608936<br/>
+script.js:714 nextTarget: 7
+script.js:659 42 #subjectId: 1 #interfaceNumber: simple10 #block:4 #trail: 3 #targetId: 7 #completed: false #eventType: click #eventTarget: 5 #timeLength: 2656 #now: 1510007612600<br/>
+script.js:659 43 #subjectId: 1 #interfaceNumber: simple10 #block:4 #trail: 3 #targetId: 7 #completed: false #eventType: click #eventTarget: 6 #timeLength: 1552 #now: 1510007614152<br/>
+script.js:659 44 #subjectId: 1 #interfaceNumber: simple10 #block:4 #trail: 3 #targetId: 7 #completed: true #eventType: click #eventTarget: 7 #timeLength: 1304 #now: 1510007615456<br/>
+script.js:714 nextTarget: 0
+script.js:659 45 #subjectId: 1 #interfaceNumber: simple10 #block:4 #trail: 4 #targetId: 0 #completed: true #eventType: click #eventTarget: 0 #timeLength: 2551 #now: 1510007619039<br/>
+script.js:714 nextTarget: 4
+script.js:659 46 #subjectId: 1 #interfaceNumber: simple10 #block:4 #trail: 5 #targetId: 4 #completed: true #eventType: click #eventTarget: 4 #timeLength: 1584 #now: 1510007621512<br/>
+script.js:714 nextTarget: 9
+script.js:659 47 #subjectId: 1 #interfaceNumber: simple10 #block:4 #trail: 6 #targetId: 9 #completed: true #eventType: click #eventTarget: 9 #timeLength: 1776 #now: 1510007624296<br/>
+script.js:714 nextTarget: 1
+script.js:659 48 #subjectId: 1 #interfaceNumber: simple10 #block:4 #trail: 7 #targetId: 1 #completed: true #eventType: click #eventTarget: 1 #timeLength: 1801 #now: 1510007626944<br/>
+script.js:714 nextTarget: 6
+script.js:659 49 #subjectId: 1 #interfaceNumber: simple10 #block:4 #trail: 8 #targetId: 6 #completed: true #eventType: click #eventTarget: 6 #timeLength: 2617 #now: 1510007630480<br/>
+script.js:714 nextTarget: 3
+script.js:659 50 #subjectId: 1 #interfaceNumber: simple10 #block:4 #trail: 9 #targetId: 3 #completed: true #eventType: click #eventTarget: 3 #timeLength: 1569 #now: 1510007633512<br/>
+script.js:714 nextTarget: 2
+script.js:659 51 #subjectId: 1 #interfaceNumber: simple10 #block:4 #trail: 10 #targetId: 2 #completed: false #eventType: click #eventTarget: 1 #timeLength: 2049 #now: 1510007636456<br/>
+script.js:659 52 #subjectId: 1 #interfaceNumber: simple10 #block:4 #trail: 10 #targetId: 2 #completed: true #eventType: click #eventTarget: 2 #timeLength: 1136 #now: 1510007637592<br/>
+script.js:670 
+	
+	1 #subjectId: 1 #interfaceNumber: simple10 #block:1 #trail: 1 #targetId: 0 #completed: true #eventType: click #eventTarget: 0 #timeLength: 3609 #now: 15100074701402 #subjectId: 1 #interfaceNumber: simple10 #block:1 #trail: 2 #targetId: 7 #completed: true #eventType: click #eventTarget: 7 #timeLength: 3576 #now: 15100074749303 #subjectId: 1 #interfaceNumber: simple10 #block:1 #trail: 3 #targetId: 4 #completed: true #eventType: click #eventTarget: 4 #timeLength: 1857 #now: 15100074778754 #subjectId: 1 #interfaceNumber: simple10 #block:1 #trail: 4 #targetId: 5 #completed: false #eventType: click #eventTarget: 3 #timeLength: 2857 #now: 15100074817315 #subjectId: 1 #interfaceNumber: simple10 #block:1 #trail: 4 #targetId: 5 #completed: false #eventType: click #eventTarget: 2 #timeLength: 3840 #now: 15100074855716 #subjectId: 1 #interfaceNumber: simple10 #block:1 #trail: 4 #targetId: 5 #completed: true #eventType: click #eventTarget: 5 #timeLength: 3312 #now: 15100074888837 #subjectId: 1 #interfaceNumber: simple10 #block:1 #trail: 5 #targetId: 6 #completed: true #eventType: click #eventTarget: 6 #timeLength: 2200 #now: 15100074923708 #subjectId: 1 #interfaceNumber: simple10 #block:1 #trail: 6 #targetId: 8 #completed: true #eventType: click #eventTarget: 8 #timeLength: 2944 #now: 15100074964509 #subjectId: 1 #interfaceNumber: simple10 #block:1 #trail: 7 #targetId: 1 #completed: true #eventType: click #eventTarget: 1 #timeLength: 3568 #now: 151000750153910 #subjectId: 1 #interfaceNumber: simple10 #block:1 #trail: 8 #targetId: 9 #completed: true #eventType: click #eventTarget: 9 #timeLength: 2633 #now: 151000750549911 #subjectId: 1 #interfaceNumber: simple10 #block:1 #trail: 9 #targetId: 3 #completed: false #eventType: click #eventTarget: 2 #timeLength: 1825 #now: 151000750823512 #subjectId: 1 #interfaceNumber: simple10 #block:1 #trail: 9 #targetId: 3 #completed: true #eventType: click #eventTarget: 3 #timeLength: 1055 #now: 151000750929013 #subjectId: 1 #interfaceNumber: simple10 #block:1 #trail: 10 #targetId: 2 #completed: true #eventType: click #eventTarget: 2 #timeLength: 3455 #now: 151000751373014 #subjectId: 1 #interfaceNumber: simple10 #block:2 #trail: 1 #targetId: 8 #completed: true #eventType: click #eventTarget: 8 #timeLength: 5064 #now: 151000752034715 #subjectId: 1 #interfaceNumber: simple10 #block:2 #trail: 2 #targetId: 5 #completed: true #eventType: click #eventTarget: 5 #timeLength: 4840 #now: 151000752633016 #subjectId: 1 #interfaceNumber: simple10 #block:2 #trail: 3 #targetId: 4 #completed: true #eventType: click #eventTarget: 4 #timeLength: 1736 #now: 151000752902617 #subjectId: 1 #interfaceNumber: simple10 #block:2 #trail: 4 #targetId: 7 #completed: true #eventType: click #eventTarget: 7 #timeLength: 4889 #now: 151000753484318 #subjectId: 1 #interfaceNumber: simple10 #block:2 #trail: 5 #targetId: 6 #completed: false #eventType: click #eventTarget: 8 #timeLength: 1920 #now: 151000753820219 #subjectId: 1 #interfaceNumber: simple10 #block:2 #trail: 5 #targetId: 6 #completed: false #eventType: click #eventTarget: 5 #timeLength: 3881 #now: 151000754208320 #subjectId: 1 #interfaceNumber: simple10 #block:2 #trail: 5 #targetId: 6 #completed: true #eventType: click #eventTarget: 6 #timeLength: 1512 #now: 151000754359521 #subjectId: 1 #interfaceNumber: simple10 #block:2 #trail: 6 #targetId: 1 #completed: true #eventType: click #eventTarget: 1 #timeLength: 5016 #now: 151000754969822 #subjectId: 1 #interfaceNumber: simple10 #block:2 #trail: 7 #targetId: 9 #completed: true #eventType: click #eventTarget: 9 #timeLength: 2257 #now: 151000755297123 #subjectId: 1 #interfaceNumber: simple10 #block:2 #trail: 8 #targetId: 2 #completed: true #eventType: click #eventTarget: 2 #timeLength: 2776 #now: 151000755675424 #subjectId: 1 #interfaceNumber: simple10 #block:2 #trail: 9 #targetId: 0 #completed: true #eventType: click #eventTarget: 0 #timeLength: 1352 #now: 151000755929825 #subjectId: 1 #interfaceNumber: simple10 #block:2 #trail: 10 #targetId: 3 #completed: true #eventType: click #eventTarget: 3 #timeLength: 1480 #now: 151000756185826 #subjectId: 1 #interfaceNumber: simple10 #block:3 #trail: 1 #targetId: 0 #completed: true #eventType: click #eventTarget: 0 #timeLength: 1792 #now: 151000756465827 #subjectId: 1 #interfaceNumber: simple10 #block:3 #trail: 2 #targetId: 2 #completed: true #eventType: click #eventTarget: 2 #timeLength: 2792 #now: 151000756849028 #subjectId: 1 #interfaceNumber: simple10 #block:3 #trail: 3 #targetId: 5 #completed: false #eventType: click #eventTarget: 6 #timeLength: 2760 #now: 151000757221829 #subjectId: 1 #interfaceNumber: simple10 #block:3 #trail: 3 #targetId: 5 #completed: true #eventType: click #eventTarget: 5 #timeLength: 1272 #now: 151000757349030 #subjectId: 1 #interfaceNumber: simple10 #block:3 #trail: 4 #targetId: 1 #completed: true #eventType: click #eventTarget: 1 #timeLength: 1760 #now: 151000757630631 #subjectId: 1 #interfaceNumber: simple10 #block:3 #trail: 5 #targetId: 8 #completed: true #eventType: click #eventTarget: 8 #timeLength: 2585 #now: 151000758009032 #subjectId: 1 #interfaceNumber: simple10 #block:3 #trail: 6 #targetId: 4 #completed: true #eventType: click #eventTarget: 4 #timeLength: 1961 #now: 151000758325033 #subjectId: 1 #interfaceNumber: simple10 #block:3 #trail: 7 #targetId: 7 #completed: false #eventType: click #eventTarget: 5 #timeLength: 4382 #now: 151000758864834 #subjectId: 1 #interfaceNumber: simple10 #block:3 #trail: 7 #targetId: 7 #completed: false #eventType: click #eventTarget: 6 #timeLength: 1552 #now: 151000759020035 #subjectId: 1 #interfaceNumber: simple10 #block:3 #trail: 7 #targetId: 7 #completed: true #eventType: click #eventTarget: 7 #timeLength: 1912 #now: 151000759211236 #subjectId: 1 #interfaceNumber: simple10 #block:3 #trail: 8 #targetId: 3 #completed: true #eventType: click #eventTarget: 3 #timeLength: 1664 #now: 151000759488837 #subjectId: 1 #interfaceNumber: simple10 #block:3 #trail: 9 #targetId: 6 #completed: true #eventType: click #eventTarget: 6 #timeLength: 2175 #now: 151000759816738 #subjectId: 1 #interfaceNumber: simple10 #block:3 #trail: 10 #targetId: 9 #completed: true #eventType: click #eventTarget: 9 #timeLength: 2104 #now: 151000760143239 #subjectId: 1 #interfaceNumber: simple10 #block:4 #trail: 1 #targetId: 5 #completed: true #eventType: click #eventTarget: 5 #timeLength: 2328 #now: 151000760472040 #subjectId: 1 #interfaceNumber: simple10 #block:4 #trail: 2 #targetId: 8 #completed: false #eventType: click #eventTarget: 7 #timeLength: 1776 #now: 151000760755241 #subjectId: 1 #interfaceNumber: simple10 #block:4 #trail: 2 #targetId: 8 #completed: true #eventType: click #eventTarget: 8 #timeLength: 1384 #now: 151000760893642 #subjectId: 1 #interfaceNumber: simple10 #block:4 #trail: 3 #targetId: 7 #completed: false #eventType: click #eventTarget: 5 #timeLength: 2656 #now: 151000761260043 #subjectId: 1 #interfaceNumber: simple10 #block:4 #trail: 3 #targetId: 7 #completed: false #eventType: click #eventTarget: 6 #timeLength: 1552 #now: 151000761415244 #subjectId: 1 #interfaceNumber: simple10 #block:4 #trail: 3 #targetId: 7 #completed: true #eventType: click #eventTarget: 7 #timeLength: 1304 #now: 151000761545645 #subjectId: 1 #interfaceNumber: simple10 #block:4 #trail: 4 #targetId: 0 #completed: true #eventType: click #eventTarget: 0 #timeLength: 2551 #now: 151000761903946 #subjectId: 1 #interfaceNumber: simple10 #block:4 #trail: 5 #targetId: 4 #completed: true #eventType: click #eventTarget: 4 #timeLength: 1584 #now: 151000762151247 #subjectId: 1 #interfaceNumber: simple10 #block:4 #trail: 6 #targetId: 9 #completed: true #eventType: click #eventTarget: 9 #timeLength: 1776 #now: 151000762429648 #subjectId: 1 #interfaceNumber: simple10 #block:4 #trail: 7 #targetId: 1 #completed: true #eventType: click #eventTarget: 1 #timeLength: 1801 #now: 151000762694449 #subjectId: 1 #interfaceNumber: simple10 #block:4 #trail: 8 #targetId: 6 #completed: true #eventType: click #eventTarget: 6 #timeLength: 2617 #now: 151000763048050 #subjectId: 1 #interfaceNumber: simple10 #block:4 #trail: 9 #targetId: 3 #completed: true #eventType: click #eventTarget: 3 #timeLength: 1569 #now: 151000763351251 #subjectId: 1 #interfaceNumber: simple10 #block:4 #trail: 10 #targetId: 2 #completed: false #eventType: click #eventTarget: 1 #timeLength: 2049 #now: 151000763645652 #subjectId: 1 #interfaceNumber: simple10 #block:4 #trail: 10 #targetId: 2 #completed: true #eventType: click #eventTarget: 2 #timeLength: 1136 #now: 1510007637592

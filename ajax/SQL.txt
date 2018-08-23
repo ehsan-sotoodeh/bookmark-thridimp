@@ -1,0 +1,5 @@
+CREATE TABLE `experiment`.`Loglist` ( `logId` INT NOT NULL AUTO_INCREMENT , `subjectNumber` INT NOT NULL , `interfaceNumber` INT NOT NULL , `documentNumber` INT NOT NULL , `target` INT NOT NULL , `visitNumber` INT NOT NULL , `trail` INT NOT NULL , `block` INT NOT NULL , `finishedByUser` INT NOT NULL , `dateTime` VARCHAR(25) NOT NULL , PRIMARY KEY (`logId`)) ENGINE = MyISAM
+
+
+CREATE TABLE `experiment`.`logDetails` ( `LogId` INT NOT NULL , `firstScrollbarClick` INT NOT NULL , `secondScrollbarClick` INT NOT NULL , `numberOfDragUp1SC` INT NOT NULL , `numberOfDragDown1SC` INT NOT NULL , `numberOfDragUp2SC` INT NOT NULL , `numberOfDragDown2SC` INT NOT NULL , `numberOfWheelUp` INT NOT NULL , `numberOfWheelDown` INT NOT NULL , `timeLength` BIGINT NOT NULL ) ENGINE = MyISAM;
+

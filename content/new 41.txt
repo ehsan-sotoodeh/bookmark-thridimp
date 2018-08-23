@@ -1,0 +1,6 @@
+816	Advanced Software Engineering
+898	Special Topics: Game Development
+960	Introduction to Ethics and Integrity
+866	Topics in Human Computer Interaction
+868	Social Computing
+961	Ethics and Integrity in Human Research
