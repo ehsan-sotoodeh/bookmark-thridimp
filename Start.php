@@ -67,7 +67,7 @@ $(document).ready(function(){
 			
 			break;
 			case "3":
-				window.location.replace("http://127.0.0.1/bookmark-thridimp/standard5.html?phase="+phase+"&interface=userselectedIcon&SampleRound="+SampleRound+"&subjectId="+subjectId);
+				window.location.replace("http://127.0.0.1/bookmark-thridimp/standard3.html?phase="+phase+"&interface=userselectedIcon&SampleRound="+SampleRound+"&subjectId="+subjectId);
 			
 			break;
 			case "4":
