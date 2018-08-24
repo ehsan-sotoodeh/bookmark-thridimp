@@ -131,7 +131,7 @@ $(document).ready(function(){
 					
 				
 			break;*/
-/* 			case 70: //f
+			case 70: //f
 				console.log("main :" + $(".main").css("margin-top"));
 				console.log("index :" + $("#secondScrollIndex").css("top"));
 				str = "main :" + $(".main").css("margin-top") + "<br/>";
@@ -144,7 +144,7 @@ $(document).ready(function(){
 					$("#bm"+currentBookmark).css({"top":$("#secondScrollIndex").css("top")});
 					
 				
-			break; */
+			break; 
 			case 80: //P
 				//showsurvayLink();
 							goToTheFirstPage();
@@ -273,6 +273,7 @@ function nextRound(){
 			allowOutsideClick: false,
 			closeOnClickOutside: false,
 		}).then(() => {
+			modalOpen = false;
 			goToTheFirstPage();
 			startNewRound();
 			requestNextScreenshot();
