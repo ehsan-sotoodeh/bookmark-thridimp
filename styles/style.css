@@ -105,7 +105,7 @@ body{
 #modal .icon{
 	width:25px;
 	height:25px;
-	margin:2px;
+	margin:6px;
 	padding:0px;
 }
 
@@ -194,7 +194,7 @@ p{
 #modal{
 	position:fixed;
 	top:50px;
-	width:300px;
+	width:330px;
 	min-height:100px;
 	background-color:#eef;
 	box-shadow: 5px 5px 5px #444;

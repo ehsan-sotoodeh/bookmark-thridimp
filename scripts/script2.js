@@ -13,8 +13,8 @@ experimentRound  = 1;
 var currentIdInBookmarkArray=-1;
 timeTick = 0;
 TRAINING_SESSION_AFTER_BOOKMARK = 20 ; // 5 s
-TRAINING_SESSION_BEFORE_BOOKMARK = 40 ; // 5 s
-EXPERIMENT_TIMER_DELAY = 60000 * 100;
+TRAINING_SESSION_BEFORE_BOOKMARK = 10 ; // 5 s
+EXPERIMENT_TIMER_DELAY = 40 * 100;
 
 iconMenuTimePassed = 0;
 TIME_TO_CHOSE_ICON = 15;
@@ -33,7 +33,7 @@ var userLabelArray = [];
 var userIconslist = [];
 var randomIconslist = [];
 var modalOpen = false;
-
+var bookmarkDistance = 58.2;
 
 $(document).ready(function(){
 
@@ -51,6 +51,7 @@ $(document).ready(function(){
 		break;
 		case "autolabel": // user Picked icons
 		case "userlabel": // user Picked icons
+			
 			$("#bookmarklist").show();
 		break;
 	}
@@ -130,8 +131,8 @@ $(document).ready(function(){
 
 					
 				
-			break;*/
-			case 70: //f
+				break;*/
+ 			case 70: //f
 				console.log("main :" + $(".main").css("margin-top"));
 				console.log("index :" + $("#secondScrollIndex").css("top"));
 				str = "main :" + $(".main").css("margin-top") + "<br/>";
@@ -144,7 +145,7 @@ $(document).ready(function(){
 					$("#bm"+currentBookmark).css({"top":$("#secondScrollIndex").css("top")});
 					
 				
-			break; 
+			break;  
 			case 80: //P
 				//showsurvayLink();
 							goToTheFirstPage();
@@ -163,6 +164,7 @@ $(document).ready(function(){
 		tempIndex = findIndexInbookmarkArray(index);
 		gotoBookmark(testSessionArray,tempIndex);
 		isTarget(index);
+		pauseTimer = false;
 		if(isTraining) timeTick = 0;
 	});
 	
@@ -200,7 +202,7 @@ $(document).ready(function(){
 		
 		$("#scroll2").append("<div id='bm"+currentIdInBookmarkArray
 					+"' class='bookmark orangeBc' ><img  class='icon' id='bm"+currentIdInBookmarkArray
-					+"' src='icons/"+index+".png' /></div>");
+					+"' src='icons/"+interfaceNumber+index+".png' /></div>");
 		userIconslist.push({"id":currentIdInBookmarkArray,"time":iconMenuTimePassed,"icon":index});
 		$("#bm"+currentIdInBookmarkArray).css({"top":thumTop + "px"});
 		$("#modal").hide();
@@ -361,8 +363,8 @@ function startNewRound(){
 	currentTarget = 0;
 	//shuffle(testSessionArray);
 	while(preRoundLastId == testSessionArray[0]){
-			console.log(testSessionArray);
-			//shuffle(testSessionArray);
+			//console.log(testSessionArray);
+			shuffle(testSessionArray);
 			
 	}
 	
@@ -375,9 +377,9 @@ function startNewRound(){
 
 
 function findIndexInbookmarkArray(index){
-	scrollIndex = bookmarksArray[index].index;
+	var scrollIndex = bookmarksArray[index].p;
 	for(x in testSessionArray ){
-		if(testSessionArray[x].index == scrollIndex ){
+		if(testSessionArray[x].p == scrollIndex ){
 			return x
 		}
 	}
@@ -639,8 +641,6 @@ function showAllBookmarks(inputArray){
 }
 	
 function findIcon(inputArray,id){
-	console.log(inputArray);
-	console.log(id);
 	for(x in inputArray){
 		if(inputArray[x].id == id)
 			return inputArray[x].icon
@@ -687,10 +687,15 @@ function saveIconMenuLog(){
 
 function placeBookmark(){
 	if(currentBookmark >= testSessionArray.length ) return;
-	thumTop = testSessionArray[currentBookmark].index;
-	id = testSessionArray[currentBookmark].id;
+	var tempId = learningSessionArray[currentBookmark].id;
+
+	id = learningSessionArray[currentBookmark].id;
+	thumTop = learningSessionArray[currentBookmark].index;
 	//if(icons != 2) bookmarked = true;
 	appendBookmark(id);
+	
+
+
 	$("#bm"+id).css({"top":thumTop + "px"});
 }
 	
@@ -708,7 +713,7 @@ function appendBookmark(id){
 				
 			$("#scroll2").append("<div id='bm"+id
 								+"' class='bookmark orangeBc' ><img  class='icon' id='bm"+id
-								+"' src='icons/"+iconsArray[iconId]+".png' /></div>");
+								+"' src='icons/"+interfaceNumber+iconsArray[iconId]+".png' /></div>");
 			
 			randomIconslist.push({"id":id,"icon":iconsArray[iconId]});
 			bookmarked = true;
@@ -720,9 +725,14 @@ function appendBookmark(id){
 		break;
 		case "autolabel": // user Picked icons
 			placeLable(id,true);
+			bookmarked = true;
+			pauseTimer = false;
+
 		break;
 		case "userlabel": // user Picked icons
 			placeLable(id,false);
+			bookmarked = true;
+
 		break;
 	}
 }
@@ -742,7 +752,7 @@ function appendAllBookmark(id,icon){
 	console.log( id +" "+ icon);
 	$("#scroll2").append("<div id='bm"+id
 					+"' class='bookmark orangeBc' ><img  class='icon' id='bm"+id
-					+"' src='icons/"+icon+".png' /></div>");
+					+"' src='icons/"+interfaceNumber+icon+".png' /></div>");
 }
 
 
@@ -784,17 +794,18 @@ function placeLable(id,auto){
 	pauseTimer = true;
 	if(!auto){
 		enterLable();
+		iconMenuTimer = setInterval(function(){ 
+			iconMenuTimePassed += 10;
+			$("#timer").text("Please Select Icon");
+			showTimer();
+		},10);
 	}else{
 		userLabelArray.push({"value":"bookmark "+ (userLabelArray.length+1) ,"time":iconMenuTimePassed,"id":id});
 		bookmarked = true;
 		updateBookmarkList();
 	}
 	
-	iconMenuTimer = setInterval(function(){ 
-		iconMenuTimePassed += 10;
-		$("#timer").text("Please Select Icon");
-		showTimer();
-	},10);
+
 
 }
 function updateBookmarkList(){
@@ -882,12 +893,12 @@ function gotoNextBookmark(){
 
 function gotoBookmark(inputArray,index){
 
-//	console.log(index)
-//	console.log(inputArray)
+/* 	console.log(inputArray[index].id)
+	console.log((inputArray[index].id * bookmarkDistance) + 25) */
 	
 
 	$('.main').css('margin-top', "-"+(inputArray[index].p)  + "px");
-	$("#secondScrollIndex").css({"top": ( inputArray[index].index ) +"px" });
+	$("#secondScrollIndex").css({"top": inputArray[index].index +"px" });
 	currentMargin = Math.abs(parseInt($('.main').css('marginTop')));
 	scrollIndex = Math.floor(Math.abs(currentMargin) / SCROLL_STEP) * -1;	
 
@@ -933,7 +944,6 @@ function startTrainingSession(){
 	gotoNextBookmark();
 	trainingTimer = setInterval(function(){ 
 		if (!pauseTimer) timeTick++;
-		
 		
 		if(timeTick > TRAINING_SESSION_BEFORE_BOOKMARK){
 			if(!bookmarked){
@@ -1029,110 +1039,72 @@ function getPhaseData(phase){
 	}
 		switch(phase){
 			case 1:
+
+				learningSessionArray.push(bookmarksArray[0]);
 				learningSessionArray.push(bookmarksArray[3]);
-				learningSessionArray.push(bookmarksArray[8]);
+				learningSessionArray.push(bookmarksArray[6]);
+				learningSessionArray.push(bookmarksArray[9]);
 				learningSessionArray.push(bookmarksArray[12]);
-				learningSessionArray.push(bookmarksArray[16]);
-				learningSessionArray.push(bookmarksArray[19]);
 	
+				testSessionArray.push(bookmarksArray[0]);
 				testSessionArray.push(bookmarksArray[3]);
-				testSessionArray.push(bookmarksArray[8]);
+				testSessionArray.push(bookmarksArray[6]);
+				testSessionArray.push(bookmarksArray[9]);
 				testSessionArray.push(bookmarksArray[12]);
-				testSessionArray.push(bookmarksArray[16]);
-				testSessionArray.push(bookmarksArray[19]);
 
 				
 			break;
 			case 2:
 				learningSessionArray.push(bookmarksArray[1]);
-				learningSessionArray.push(bookmarksArray[6]);
+				learningSessionArray.push(bookmarksArray[4]);
+				learningSessionArray.push(bookmarksArray[7]);
 				learningSessionArray.push(bookmarksArray[10]);
-				learningSessionArray.push(bookmarksArray[14]);
-				learningSessionArray.push(bookmarksArray[18]);
+				learningSessionArray.push(bookmarksArray[13]);
 
-				testSessionArray.push(bookmarksArray[1]);
-				testSessionArray.push(bookmarksArray[6]);
-				testSessionArray.push(bookmarksArray[10]);
-				testSessionArray.push(bookmarksArray[14]);
-				testSessionArray.push(bookmarksArray[18]);
-				
+				testSessionArray.push(bookmarksArray[0]);
 				testSessionArray.push(bookmarksArray[3]);
-				testSessionArray.push(bookmarksArray[8]);
+				testSessionArray.push(bookmarksArray[6]);
+				testSessionArray.push(bookmarksArray[9]);
 				testSessionArray.push(bookmarksArray[12]);
-				testSessionArray.push(bookmarksArray[16]);
-				testSessionArray.push(bookmarksArray[19]);
+				
+				testSessionArray.push(bookmarksArray[1]);
+				testSessionArray.push(bookmarksArray[4]);
+				testSessionArray.push(bookmarksArray[7]);
+				testSessionArray.push(bookmarksArray[10]);
+				testSessionArray.push(bookmarksArray[13]);
 				
 
 			break;
 			case 3:
-				learningSessionArray.push(bookmarksArray[0]);
+				learningSessionArray.push(bookmarksArray[2]);
 				learningSessionArray.push(bookmarksArray[5]);
-				learningSessionArray.push(bookmarksArray[9]);
-				learningSessionArray.push(bookmarksArray[13]);
-				learningSessionArray.push(bookmarksArray[17]);
+				learningSessionArray.push(bookmarksArray[8]);
+				learningSessionArray.push(bookmarksArray[11]);
+				learningSessionArray.push(bookmarksArray[14]);
 
 				testSessionArray.push(bookmarksArray[0]);
-				testSessionArray.push(bookmarksArray[5]);
+				testSessionArray.push(bookmarksArray[3]);
+				testSessionArray.push(bookmarksArray[6]);
 				testSessionArray.push(bookmarksArray[9]);
-				testSessionArray.push(bookmarksArray[13]);
-				testSessionArray.push(bookmarksArray[17]);
+				testSessionArray.push(bookmarksArray[12]);
 				
 				testSessionArray.push(bookmarksArray[1]);
-				testSessionArray.push(bookmarksArray[6]);
-				testSessionArray.push(bookmarksArray[10]);
-				testSessionArray.push(bookmarksArray[14]);
-				testSessionArray.push(bookmarksArray[18]);
-				
-				testSessionArray.push(bookmarksArray[3]);
-				testSessionArray.push(bookmarksArray[8]);
-				testSessionArray.push(bookmarksArray[12]);
-				testSessionArray.push(bookmarksArray[16]);
-				testSessionArray.push(bookmarksArray[19]);
-				
-
-
-
-			break;
-			case 4:
-				learningSessionArray.push(bookmarksArray[2]);
-				learningSessionArray.push(bookmarksArray[4]);
-				learningSessionArray.push(bookmarksArray[7]);
-				learningSessionArray.push(bookmarksArray[11]);
-				learningSessionArray.push(bookmarksArray[15]);	
-				
-				
-				testSessionArray.push(bookmarksArray[2]);
 				testSessionArray.push(bookmarksArray[4]);
 				testSessionArray.push(bookmarksArray[7]);
-				testSessionArray.push(bookmarksArray[11]);
-				testSessionArray.push(bookmarksArray[15]);
-				
-				testSessionArray.push(bookmarksArray[0]);
-				testSessionArray.push(bookmarksArray[5]);
-				testSessionArray.push(bookmarksArray[9]);
-				testSessionArray.push(bookmarksArray[13]);
-				testSessionArray.push(bookmarksArray[17]);
-				
-				testSessionArray.push(bookmarksArray[1]);
-				testSessionArray.push(bookmarksArray[6]);
 				testSessionArray.push(bookmarksArray[10]);
-				testSessionArray.push(bookmarksArray[14]);
-				testSessionArray.push(bookmarksArray[18]);
-
-				testSessionArray.push(bookmarksArray[3]);
+				testSessionArray.push(bookmarksArray[13]);
+				
+				testSessionArray.push(bookmarksArray[2]);
+				testSessionArray.push(bookmarksArray[5]);
 				testSessionArray.push(bookmarksArray[8]);
-				testSessionArray.push(bookmarksArray[12]);
-				testSessionArray.push(bookmarksArray[16]);
-				testSessionArray.push(bookmarksArray[19]);
+				testSessionArray.push(bookmarksArray[11]);
+				testSessionArray.push(bookmarksArray[14]);
 				
 
 
 
-
-				
-				
 			break;
-			default:
+
 			
 		}
 		
@@ -1148,140 +1120,124 @@ function setBookmarksArray(){
 	
 	switch(interfaceNumber){
 		case "plain":
-				bookmarksArray = new Array(
-				{id:0 , p :13050 , index:25 , i:true,d:"H"},
-				{id:1 , p :38100 , index:73, i:true,d:"H"},
-				{id:2 , p :60300 , index:115 , i:true,d:"H"},
-				{id:3 , p :83400 , index:160 , i:true,d:"H"},
-				{id:4 , p :110100 , index:211 , i:true,d:"H"},
-				{id:5 , p :133050 , index:255 , i:true,d:"H"},
-				{id:6 , p :155700 , index:299 , i:true,d:"H"},
-				{id:7 , p :182550 , index:350 , i:true,d:"H"},
-				{id:8 , p :205200 , index:394 , i:true,d:"H"},
-				{id:9 , p :229200 , index:440 , i:true,d:"H"},
-				{id:10 , p :256050 , index:491 , i:true,d:"H"},
-				{id:11 , p :276900 , index:532 , i:true,d:"H"},
-				{id:12 , p :301800 , index:579 , i:true,d:"H"},
-				{id:13 , p :323700 , index:621 , i:true,d:"H"},
-				{id:14 , p :347550 , index:667 , i:true,d:"H"},
-				{id:15 , p :372300 , index:715 , i:true,d:"H"},
-				{id:16 , p :379950 , index:764 , i:true,d:"H"},
-				{id:17 , p :420600 , index:808 , i:true,d:"H"},
-				{id:18 , p :443400 , index:851 , i:true,d:"H"},
-				{id:19 , p :469200 , index:901 , i:true,d:"H"}, 
-				{id:20 , p :96600 , index:185.607 , i:true,d:"H"}, 
-				{id:21 , p :172950 , index:332.307 , i:true,d:"H"}, 
+			bookmarksArray = new Array(
+				
+				{id:0 , p :13800 , index:25 , i:true,d:"H"},
+				{id:1 , p :30600 , index:83, i:false,d:"H"},
+				{id:2 , p :94050 , index:141 , i:true,d:"H"},
+				{id:3 , p :58800 , index:199 , i:false,d:"H"},
+				{id:4 , p :37800 , index:257 , i:true,d:"H"},
+				{id:5 , p :26850 , index:316 , i:false,d:"H"},
+				{id:6 , p :73200 , index:374 , i:true,d:"H"},
+				{id:7 , p :76350 , index:432 , i:false,d:"H"},
+				{id:8 , p :18150 , index:490 , i:true,d:"H"},
+				{id:9 , p :66900 , index:548 , i:true,d:"H"},
+				{id:10 , p :35400 , index:607 , i:true,d:"H"},
+				{id:11 , p :43500 , index:665 , i:true,d:"H"},
+				{id:12 , p :24750 , index:723 , i:false,d:"H"},
+				{id:13 , p :90150 , index:781 , i:true,d:"H"},
+				{id:14 , p :3150 , index:839 , i:false,d:"H"},
+				{id:15 , p :27900 , index:400 , i:true,d:"H"},
+				{id:16 , p :87750 , index:500 , i:false,d:"H"},
+					
+
+				 
 		)
-		document.cookie = "folder=newseries2/plain";
+		document.cookie = "folder=plain";
 
 		break;
 		case "randomIcon":
 			bookmarksArray = new Array(
-				{id:0 , p :13050 , index:25 , i:true,d:"H"},
-				{id:1 , p :38100 , index:73, i:true,d:"H"},
-				{id:2 , p :60300 , index:115 , i:true,d:"H"},
-				{id:3 , p :83400 , index:160 , i:true,d:"H"},
-				{id:4 , p :110100 , index:211 , i:true,d:"H"},
-				{id:5 , p :133050 , index:255 , i:true,d:"H"},
-				{id:6 , p :155700 , index:299 , i:true,d:"H"},
-				{id:7 , p :182550 , index:350 , i:true,d:"H"},
-				{id:8 , p :205200 , index:394 , i:true,d:"H"},
-				{id:9 , p :229200 , index:440 , i:true,d:"H"},
-				{id:10 , p :256050 , index:491 , i:true,d:"H"},
-				{id:11 , p :276900 , index:532 , i:true,d:"H"},
-				{id:12 , p :301800 , index:579 , i:true,d:"H"},
-				{id:13 , p :323700 , index:621 , i:true,d:"H"},
-				{id:14 , p :347550 , index:667 , i:true,d:"H"},
-				{id:15 , p :372300 , index:715 , i:true,d:"H"},
-				{id:16 , p :379950 , index:764 , i:true,d:"H"},
-				{id:17 , p :420600 , index:808 , i:true,d:"H"},
-				{id:18 , p :443400 , index:851 , i:true,d:"H"},
-				{id:19 , p :469200 , index:901 , i:true,d:"H"}, 
-				{id:20 , p :96600 , index:185.607 , i:true,d:"H"}, 
-				{id:21 , p :172950 , index:332.307 , i:true,d:"H"}, 
+				{id:0 , p :100650 , index:25 , i:true,d:"H"},
+				{id:1 , p :80550 , index:83, i:true,d:"H"},
+				{id:2 , p :3600 , index:141 , i:false,d:"H"},
+				{id:3 , p :58500 , index:199 , i:false,d:"H"},
+				{id:4 , p :20250 , index:257 , i:true,d:"H"},
+				{id:5 , p :61800 , index:316 , i:false,d:"H"},
+				{id:6 , p :37200 , index:374 , i:true,d:"H"},
+				{id:7 , p :88500 , index:432 , i:true,d:"H"},
+				{id:8 , p :114300 , index:490 , i:true,d:"H"},
+				{id:9 , p :51000 , index:548 , i:false,d:"H"},
+				{id:10 , p :138300 , index:607 , i:true,d:"H"},
+				{id:11 , p :76350 , index:665 , i:true,d:"H"},
+				{id:12 , p :56850 , index:723 , i:false,d:"H"},
+				{id:13 , p :60450 , index:781 , i:false,d:"H"},
+				{id:14 , p :78750 , index:839 , i:true,d:"H"},
+				{id:15 , p :56850 , index:400 , i:true,d:"H"},
+				{id:16 , p :72000 , index:500 , i:false,d:"H"},
 			)
-			document.cookie = "folder=newseries2/randomIcon";
+			document.cookie = "folder=randomIcon";
 		break;
 		case "userselectedIcon":
 			bookmarksArray = new Array(
-					{id:0 , p :13050 , index:25 , i:true,d:"H"},
-					{id:1 , p :38100 , index:73, i:true,d:"H"},
-					{id:2 , p :60300 , index:115 , i:true,d:"H"},
-					{id:3 , p :83400 , index:160 , i:true,d:"H"},
-					{id:4 , p :110100 , index:211 , i:true,d:"H"},
-					{id:5 , p :133050 , index:255 , i:true,d:"H"},
-					{id:6 , p :155700 , index:299 , i:true,d:"H"},
-					{id:7 , p :182550 , index:350 , i:true,d:"H"},
-					{id:8 , p :205200 , index:394 , i:true,d:"H"},
-					{id:9 , p :229200 , index:440 , i:true,d:"H"},
-					{id:10 , p :256050 , index:491 , i:true,d:"H"},
-					{id:11 , p :276900 , index:532 , i:true,d:"H"},
-					{id:12 , p :301800 , index:579 , i:true,d:"H"},
-					{id:13 , p :323700 , index:621 , i:true,d:"H"},
-					{id:14 , p :347550 , index:667 , i:true,d:"H"},
-					{id:15 , p :372300 , index:715 , i:true,d:"H"},
-					{id:16 , p :379950 , index:764 , i:true,d:"H"},
-					{id:17 , p :420600 , index:808 , i:true,d:"H"},
-					{id:18 , p :443400 , index:851 , i:true,d:"H"},
-					{id:19 , p :469200 , index:901 , i:true,d:"H"}, 
-					{id:20 , p :96600 , index:185.607 , i:true,d:"H"}, 
-					{id:21 , p :172950 , index:332.307 , i:true,d:"H"}, 
+			
+				{id:0 , p :9000 , index:25 , i:true,d:"H"},
+				{id:1 , p :300 , index:83, i:false,d:"H"},
+				{id:2 , p :3600 , index:141 , i:true,d:"H"},
+				{id:3 , p :2100 , index:199 , i:true,d:"H"},
+				{id:4 , p :26850 , index:257 , i:false,d:"H"},
+				{id:5 , p :46650 , index:316 , i:false,d:"H"},
+				{id:6 , p :4950 , index:374 , i:true,d:"H"},
+				{id:7 , p :21750 , index:432 , i:true,d:"H"},
+				{id:8 , p :60300 , index:490  , i:false,d:"H"},
+				{id:9 , p :43500 , index:548 , i:true,d:"H"},
+				{id:10 , p :11550 , index:607 , i:true,d:"H"},
+				{id:11 , p :34200 , index:665 , i:false,d:"H"},
+				{id:12 , p :32250 , index: 723, i:false,d:"H"},
+				{id:13 , p :41850 , index:781 , i:true,d:"H"},
+				{id:14 , p :138900 , index:839 , i:true,d:"H"},
+				{id:15 , p :85350 , index:400 , i:true,d:"H"},
+				{id:16 , p :88200 , index:500 , i:false,d:"H"},
+
 			)
-			document.cookie = "folder=newseries2/userselectedIcon";
+			document.cookie = "folder=userselectedIcon";
 		break;
 		case "autolabel":
 			bookmarksArray = new Array(
-					{id:0 , p :13050 , index:25 , i:true,d:"H"},
-					{id:1 , p :38100 , index:73, i:true,d:"H"},
-					{id:2 , p :60300 , index:115 , i:true,d:"H"},
-					{id:3 , p :83400 , index:160 , i:true,d:"H"},
-					{id:4 , p :110100 , index:211 , i:true,d:"H"},
-					{id:5 , p :133050 , index:255 , i:true,d:"H"},
-					{id:6 , p :155700 , index:299 , i:true,d:"H"},
-					{id:7 , p :182550 , index:350 , i:true,d:"H"},
-					{id:8 , p :205200 , index:394 , i:true,d:"H"},
-					{id:9 , p :229200 , index:440 , i:true,d:"H"},
-					{id:10 , p :256050 , index:491 , i:true,d:"H"},
-					{id:11 , p :276900 , index:532 , i:true,d:"H"},
-					{id:12 , p :301800 , index:579 , i:true,d:"H"},
-					{id:13 , p :323700 , index:621 , i:true,d:"H"},
-					{id:14 , p :347550 , index:667 , i:true,d:"H"},
-					{id:15 , p :372300 , index:715 , i:true,d:"H"},
-					{id:16 , p :379950 , index:764 , i:true,d:"H"},
-					{id:17 , p :420600 , index:808 , i:true,d:"H"},
-					{id:18 , p :443400 , index:851 , i:true,d:"H"},
-					{id:19 , p :469200 , index:901 , i:true,d:"H"}, 
-					{id:20 , p :96600 , index:185.607 , i:true,d:"H"}, 
-					{id:21 , p :172950 , index:332.307 , i:true,d:"H"}, 
+					{id:0 , p :3150 , index:25 , i:true,d:"H"},
+					{id:1 , p :32400 , index:83, i:false,d:"H"},
+					//{id:2 , p :3550 , index:141 , i:false,d:"H"},
+					{id:2 , p :4800 , index:141 , i:false,d:"H"},
+					{id:3 , p :8250 , index:199 , i:true,d:"H"},
+					{id:4 , p :10200 , index:257 , i:true,d:"H"},
+					{id:5 , p :37050 , index:316 , i:false,d:"H"},
+					{id:6 , p :11400 , index:374 , i:true,d:"H"},
+					{id:7 , p :43500 , index:432 , i:false,d:"H"},
+					{id:8 , p :15300 , index:490 , i:true,d:"H"},
+					{id:9 , p :21900 , index:548 , i:true,d:"H"},
+					{id:10 , p :47250 , index:607 , i:false,d:"H"},
+					{id:11 , p :85500 , index:665 , i:false,d:"H"},
+					{id:12 , p :26250 , index:723 , i:true,d:"H"},
+					{id:13 , p :34200 , index:781 , i:true,d:"H"},
+					{id:14 , p :29550 , index:839 , i:true,d:"H"},
+					{id:15 , p :117450 , index:400 , i:true,d:"H"},
+					{id:16 , p :121050 , index:500 , i:false,d:"H"},
+					
 			)
-			document.cookie = "folder=newseries2/autolabel";
+			document.cookie = "folder=autolabel";
 		break;
 		case "userlabel":
 			bookmarksArray = new Array(
-					{id:0 , p :13050 , index:25 , i:true,d:"H"},
-					{id:1 , p :38100 , index:73, i:true,d:"H"},
-					{id:2 , p :60300 , index:115 , i:true,d:"H"},
-					{id:3 , p :83400 , index:160 , i:true,d:"H"},
-					{id:4 , p :110100 , index:211 , i:true,d:"H"},
-					{id:5 , p :133050 , index:255 , i:true,d:"H"},
-					{id:6 , p :155700 , index:299 , i:true,d:"H"},
-					{id:7 , p :182550 , index:350 , i:true,d:"H"},
-					{id:8 , p :205200 , index:394 , i:true,d:"H"},
-					{id:9 , p :229200 , index:440 , i:true,d:"H"},
-					{id:10 , p :256050 , index:491 , i:true,d:"H"},
-					{id:11 , p :276900 , index:532 , i:true,d:"H"},
-					{id:12 , p :301800 , index:579 , i:true,d:"H"},
-					{id:13 , p :323700 , index:621 , i:true,d:"H"},
-					{id:14 , p :347550 , index:667 , i:true,d:"H"},
-					{id:15 , p :372300 , index:715 , i:true,d:"H"},
-					{id:16 , p :379950 , index:764 , i:true,d:"H"},
-					{id:17 , p :420600 , index:808 , i:true,d:"H"},
-					{id:18 , p :443400 , index:851 , i:true,d:"H"},
-					{id:19 , p :469200 , index:901 , i:true,d:"H"}, 
-					{id:20 , p :96600 , index:185.607 , i:true,d:"H"}, 
-					{id:21 , p :172950 , index:332.307 , i:true,d:"H"}, 
+					{id:0 , p :2550 , index:25 , i:false,d:"H"},
+					{id:1 , p :3450 , index:83, i:true,d:"H"},
+					{id:2 , p :40200 , index:141 , i:true,d:"H"},
+					{id:3 , p :22650 , index:199 , i:true,d:"H"},
+					{id:4 , p :7050 , index:257 , i:false,d:"H"},
+					{id:5 , p :16200 , index:316 , i:true,d:"H"},
+					{id:6 , p :8400 , index:374 , i:true,d:"H"},
+					{id:7 , p :18150 , index:432 , i:false,d:"H"},
+					{id:8 , p :11250 , index:490 , i:false,d:"H"},
+					{id:9 , p :5400 , index:548 , i:true,d:"H"},
+					{id:10 , p :35850 , index:607 , i:true,d:"H"},
+					{id:11 , p :17400 , index:665 , i:false,d:"H"},
+					{id:12 , p :10350 , index:723 , i:true,d:"H"},
+					{id:13 , p :4650 , index:781 , i:false,d:"H"},
+					{id:14 , p :12300 , index:839 , i:true,d:"H"},
+					{id:15 , p :41850 , index:400 , i:true,d:"H"},
+					{id:16 , p :45150 , index:500 , i:false,d:"H"},
+					 
 			)
-			document.cookie = "folder=newseries2/userlabel";
+			document.cookie = "folder=userlabel";
 		break;
 	}
 	

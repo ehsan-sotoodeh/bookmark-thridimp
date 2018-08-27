@@ -60,14 +60,14 @@ $(document).ready(function(){
 		
  		switch(interface){
 			case "1":
-				window.location.replace("http://127.0.0.1/bookmark-thridimp/standard1.html?phase="+phase+"&interface=plain&SampleRound="+SampleRound+"&subjectId="+subjectId);
+				window.location.replace("http://127.0.0.1/bookmark-thridimp/standard3.html?phase="+phase+"&interface=plain&SampleRound="+SampleRound+"&subjectId="+subjectId);
 			break;
 			case "2":
 				window.location.replace("http://127.0.0.1/bookmark-thridimp/standard2.html?phase="+phase+"&interface=randomIcon&SampleRound="+SampleRound+"&subjectId="+subjectId);
 			
 			break;
 			case "3":
-				window.location.replace("http://127.0.0.1/bookmark-thridimp/standard3.html?phase="+phase+"&interface=userselectedIcon&SampleRound="+SampleRound+"&subjectId="+subjectId);
+				window.location.replace("http://127.0.0.1/bookmark-thridimp/standard1.html?phase="+phase+"&interface=userselectedIcon&SampleRound="+SampleRound+"&subjectId="+subjectId);
 			
 			break;
 			case "4":
