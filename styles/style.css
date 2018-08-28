@@ -207,7 +207,7 @@ p{
 
 #bookmarklist{
 	position:fixed;
-	top:150px;
+	top:170px;
 	right: 50px;
 	width:200px;
 	min-height:30px;
@@ -326,6 +326,18 @@ h3{
 
 }
 
+#openBookmarkList{
+    position: fixed;
+    top: 130px;
+    right: 50px;
+    background-color: #ff8b8b;
+    font-weight: bold;
+    font-size: 15px;
+    box-shadow: 5px 5px 5px #444;
+    z-index: 100000;
+    padding: 8px 15px;
+
+}
 
 p{
 	line-height: 160%;
@@ -346,4 +358,6 @@ p{
 
 .swal-overlay {
 	overflow-y: hidden
-};
+}
+
+

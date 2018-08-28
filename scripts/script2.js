@@ -47,6 +47,7 @@ $(document).ready(function(){
 		case "plain": //No Icons
 		case "randomIcon": // Random icons 
 		case "userselectedIcon": // user Picked icons
+			$("#openBookmarkList").hide();
 			$("#bookmarklist").hide();
 		break;
 		case "autolabel": // user Picked icons
@@ -55,7 +56,8 @@ $(document).ready(function(){
 			$("#bookmarklist").show();
 		break;
 	}
-	
+	document.cookie = "ScreenShot=-1";
+
 	
 	setBookmarksArray();
 	currentPhase = parseInt(url.searchParams.get("phase"));
@@ -166,6 +168,8 @@ $(document).ready(function(){
 		isTarget(index);
 		pauseTimer = false;
 		if(isTraining) timeTick = 0;
+		$("#bookmarklist").hide();
+		console.log("ccccccccccc");
 	});
 	
 	
@@ -406,7 +410,7 @@ function startExperiment(){
 	console.log(userLabelArray);
 	console.log(userIconslist);
 	console.log(randomIconslist);
-
+	$("#bookmarklist").hide();
 	timeTick=0;
 }
 
@@ -835,7 +839,8 @@ function gotoLabel(id,obj){
 	gotoBookmark(testSessionArray,tempIndex);
 	isTarget(id);
 	if(isTraining) timeTick = 0;
-	
+		$("#bookmarklist").hide();
+		console.log("ccccccccccc");
 	
 	
 	
@@ -1289,6 +1294,27 @@ function setBookmarksArray(){
 
 }
 
+function setInterfaceCookies(){
+		switch(interfaceNumber){
+		case "plain":
+			document.cookie = "folder=plain";
+		break;
+		case "randomIcon":
+			document.cookie = "folder=randomIcon";
+		break;
+		case "userselectedIcon":
+			document.cookie = "folder=userselectedIcon";
+		break;
+		case "autolabel":
+			document.cookie = "folder=autolabel";
+		break;
+		case "userlabel":
+			document.cookie = "folder=userlabel";
+		break;
+	}
+	
+}
+
 
 	//////////////////////////
 	// Icons 
@@ -1322,4 +1348,9 @@ function getCookie(cname) {
 		}
 	}
 	return "";
+}
+
+
+function openBookmarkList(){
+	$("#bookmarklist").show();
 }
