@@ -109,12 +109,12 @@ $(document).ready(function(){
 				timeTick = 0;
 				break;
 			 case 81: //Q
-				scrollIndex -= 200;
+			//	scrollIndex -= 200;
 	
 			break;
 			case 87: //W
 				//excapeTraining();
-				scrollIndex += 200;
+				//scrollIndex += 200;
 			break;
 			/*case 83: //S
 				savelog();
@@ -133,7 +133,7 @@ $(document).ready(function(){
 				
 				break;*/
  			case 70: //f
-				console.log("main :" + $(".main").css("margin-top"));
+/* 				console.log("main :" + $(".main").css("margin-top"));
 				console.log("index :" + $("#secondScrollIndex").css("top"));
 				str = "main :" + $(".main").css("margin-top") + "<br/>";
 				str += "index :" + $("#secondScrollIndex").css("top");
@@ -142,15 +142,15 @@ $(document).ready(function(){
 				
 					currentBookmark++;
 					appendBookmark(currentBookmark);
-					$("#bm"+currentBookmark).css({"top":$("#secondScrollIndex").css("top")});
+					$("#bm"+currentBookmark).css({"top":$("#secondScrollIndex").css("top")}); */
 					
 				
 			break;  
 			case 80: //P
 				//showsurvayLink();
-							goToTheFirstPage();
+						//	goToTheFirstPage();
 
-					excapeTraining();
+					//excapeTraining();
 				
 			break;
 			 
@@ -731,7 +731,6 @@ function appendBookmark(id){
 		break;
 		case "userlabel": // user Picked icons
 			placeLable(id,false);
-			bookmarked = true;
 
 		break;
 	}
@@ -785,6 +784,7 @@ function enterLable(){
 			bookmarked = true;
 			updateBookmarkList();
 		}
+		iconMenuTimePassed = 0;
 	});
 }
 
@@ -1141,6 +1141,9 @@ function setBookmarksArray(){
 				{id:16 , p :87750 , index:500 , i:false,d:"H"},
 					
 
+
+					
+					
 				 
 		)
 		document.cookie = "folder=plain";
@@ -1152,7 +1155,7 @@ function setBookmarksArray(){
 				{id:1 , p :80550 , index:83, i:true,d:"H"},
 				{id:2 , p :3600 , index:141 , i:false,d:"H"},
 				{id:3 , p :58500 , index:199 , i:false,d:"H"},
-				{id:4 , p :20250 , index:257 , i:true,d:"H"},
+				{id:4 , p : 56850 , index:  257, i:false,d:"H"},
 				{id:5 , p :61800 , index:316 , i:false,d:"H"},
 				{id:6 , p :37200 , index:374 , i:true,d:"H"},
 				{id:7 , p :88500 , index:432 , i:true,d:"H"},
@@ -1160,11 +1163,17 @@ function setBookmarksArray(){
 				{id:9 , p :51000 , index:548 , i:false,d:"H"},
 				{id:10 , p :138300 , index:607 , i:true,d:"H"},
 				{id:11 , p :76350 , index:665 , i:true,d:"H"},
-				{id:12 , p :56850 , index:723 , i:false,d:"H"},
+				{id:12 , p :20250 , index: 723, i:true ,d:"H"},
 				{id:13 , p :60450 , index:781 , i:false,d:"H"},
 				{id:14 , p :78750 , index:839 , i:true,d:"H"},
 				{id:15 , p :56850 , index:400 , i:true,d:"H"},
 				{id:16 , p :72000 , index:500 , i:false,d:"H"},
+				
+				// 4 -> 12
+				
+
+				
+				
 			)
 			document.cookie = "folder=randomIcon";
 		break;
@@ -1179,8 +1188,8 @@ function setBookmarksArray(){
 				{id:5 , p :46650 , index:316 , i:false,d:"H"},
 				{id:6 , p :4950 , index:374 , i:true,d:"H"},
 				{id:7 , p :21750 , index:432 , i:true,d:"H"},
-				{id:8 , p :60300 , index:490  , i:false,d:"H"},
-				{id:9 , p :43500 , index:548 , i:true,d:"H"},
+				{id:8 , p :  43500, index:490  , i:false ,d:"H"},
+				{id:9 , p :60300 , index:548 , i:true,d:"H"},
 				{id:10 , p :11550 , index:607 , i:true,d:"H"},
 				{id:11 , p :34200 , index:665 , i:false,d:"H"},
 				{id:12 , p :32250 , index: 723, i:false,d:"H"},
@@ -1188,17 +1197,20 @@ function setBookmarksArray(){
 				{id:14 , p :138900 , index:839 , i:true,d:"H"},
 				{id:15 , p :85350 , index:400 , i:true,d:"H"},
 				{id:16 , p :88200 , index:500 , i:false,d:"H"},
+				
+				// 9 - > 8 
+				
+
 
 			)
 			document.cookie = "folder=userselectedIcon";
 		break;
 		case "autolabel":
 			bookmarksArray = new Array(
-					{id:0 , p :3150 , index:25 , i:true,d:"H"},
-					{id:1 , p :32400 , index:83, i:false,d:"H"},
-					//{id:2 , p :3550 , index:141 , i:false,d:"H"},
-					{id:2 , p :4800 , index:141 , i:false,d:"H"},
-					{id:3 , p :8250 , index:199 , i:true,d:"H"},
+					{id:0 , p :32400 , index:25 , i:false,d:"H"},
+					{id:1 , p : 3150 , index:83, i:true,d:"H"},
+					{id:2 , p : 8250  , index:141 , i:true,d:"H"},
+					{id:3 , p : 4800 , index:199 , i:false,d:"H"},
 					{id:4 , p :10200 , index:257 , i:true,d:"H"},
 					{id:5 , p :37050 , index:316 , i:false,d:"H"},
 					{id:6 , p :11400 , index:374 , i:true,d:"H"},
@@ -1213,6 +1225,14 @@ function setBookmarksArray(){
 					{id:15 , p :117450 , index:400 , i:true,d:"H"},
 					{id:16 , p :121050 , index:500 , i:false,d:"H"},
 					
+					
+					//  0 - > 1 * 1 -> 2
+					// 2 -> 3 * 3 -> 4
+					
+
+				
+				
+					
 			)
 			document.cookie = "folder=autolabel";
 		break;
@@ -1226,15 +1246,36 @@ function setBookmarksArray(){
 					{id:5 , p :16200 , index:316 , i:true,d:"H"},
 					{id:6 , p :8400 , index:374 , i:true,d:"H"},
 					{id:7 , p :18150 , index:432 , i:false,d:"H"},
-					{id:8 , p :11250 , index:490 , i:false,d:"H"},
-					{id:9 , p :5400 , index:548 , i:true,d:"H"},
+					{id:8 , p :5400  , index:490 , i:true,d:"H"},
+					{id:9 , p :11250 , index:548 , i:false,d:"H"},
 					{id:10 , p :35850 , index:607 , i:true,d:"H"},
 					{id:11 , p :17400 , index:665 , i:false,d:"H"},
 					{id:12 , p :10350 , index:723 , i:true,d:"H"},
-					{id:13 , p :4650 , index:781 , i:false,d:"H"},
-					{id:14 , p :12300 , index:839 , i:true,d:"H"},
+					{id:13 , p :12300  , index:781 , i:true ,d:"H"},
+					{id:14 , p : 4650 , index:839 , i:false,d:"H"},
 					{id:15 , p :41850 , index:400 , i:true,d:"H"},
 					{id:16 , p :45150 , index:500 , i:false,d:"H"},
+					
+					// 8 - > 9 * 9 -> 10
+					// 13 - 14 * 14 - 15
+					
+/*  				testSessionArray.push(bookmarksArray[0]); f
+				testSessionArray.push(bookmarksArray[3]); t
+				testSessionArray.push(bookmarksArray[6]); t
+				testSessionArray.push(bookmarksArray[9]); f
+				testSessionArray.push(bookmarksArray[12]); t
+				
+				testSessionArray.push(bookmarksArray[1]); t
+				testSessionArray.push(bookmarksArray[4]); f
+				testSessionArray.push(bookmarksArray[7]); f
+				testSessionArray.push(bookmarksArray[10]); t
+				testSessionArray.push(bookmarksArray[13]); f
+				
+				testSessionArray.push(bookmarksArray[2]); t
+				testSessionArray.push(bookmarksArray[5]); t
+				testSessionArray.push(bookmarksArray[8]); t
+				testSessionArray.push(bookmarksArray[11]); f
+				testSessionArray.push(bookmarksArray[14]); t  */
 					 
 			)
 			document.cookie = "folder=userlabel";
