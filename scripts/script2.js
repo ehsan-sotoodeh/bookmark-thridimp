@@ -42,6 +42,8 @@ $(document).ready(function(){
 	interfaceNumber = url.searchParams.get("interface");	
 	if(SampleRound === "true"){
 		SampleRound = true;
+		NUMBER_OF_ROUNDS = 1;
+
 	}
 	switch (interfaceNumber){
 		case "plain": //No Icons
@@ -135,7 +137,7 @@ $(document).ready(function(){
 				
 				break;*/
  			case 70: //f
-/* 				console.log("main :" + $(".main").css("margin-top"));
+/*  				console.log("main :" + $(".main").css("margin-top"));
 				console.log("index :" + $("#secondScrollIndex").css("top"));
 				str = "main :" + $(".main").css("margin-top") + "<br/>";
 				str += "index :" + $("#secondScrollIndex").css("top");
@@ -144,7 +146,7 @@ $(document).ready(function(){
 				
 					currentBookmark++;
 					appendBookmark(currentBookmark);
-					$("#bm"+currentBookmark).css({"top":$("#secondScrollIndex").css("top")}); */
+					$("#bm"+currentBookmark).css({"top":$("#secondScrollIndex").css("top")});  */
 					
 				
 			break;  
@@ -229,6 +231,7 @@ $(document).ready(function(){
 });
 
 function scrollThePage(direction){
+	return;
 	dir = "";
 	if(direction){
 		dir = "U";
@@ -898,8 +901,8 @@ function gotoNextBookmark(){
 
 function gotoBookmark(inputArray,index){
 
-/* 	console.log(inputArray[index].id)
-	console.log((inputArray[index].id * bookmarkDistance) + 25) */
+ 	console.log(inputArray)
+	//console.log((inputArray[index].id * bookmarkDistance) + 25) 
 	
 
 	$('.main').css('margin-top', "-"+(inputArray[index].p)  + "px");
@@ -1030,12 +1033,12 @@ function getPhaseData(phase){
 	
 	if(SampleRound == true){
 		console.log(SampleRound);
-		learningSessionArray.push(bookmarksArray[20]);
-		learningSessionArray.push(bookmarksArray[21]);
+		learningSessionArray.push(bookmarksArray[15]);
+		learningSessionArray.push(bookmarksArray[16]);
 
 	
-		testSessionArray.push(bookmarksArray[20]);
-		testSessionArray.push(bookmarksArray[21]);
+		testSessionArray.push(bookmarksArray[15]);
+		testSessionArray.push(bookmarksArray[16]);
 		
 		
 		return {learningSessionArray , testSessionArray}
@@ -1171,7 +1174,7 @@ function setBookmarksArray(){
 				{id:12 , p :20250 , index: 723, i:true ,d:"H"},
 				{id:13 , p :60450 , index:781 , i:false,d:"H"},
 				{id:14 , p :78750 , index:839 , i:true,d:"H"},
-				{id:15 , p :56850 , index:400 , i:true,d:"H"},
+				{id:15 , p :74700 , index:400 , i:true,d:"H"},
 				{id:16 , p :72000 , index:500 , i:false,d:"H"},
 				
 				// 4 -> 12

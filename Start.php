@@ -13,16 +13,16 @@
 </center>
 <div style="width:400px; height:300px;margin:0px auto !important;" >
 	<p><b> Counter Balance </b></p>
-	<input  align="right"  type="text" id="subjectId" value="testUSer"> 
+	<input  align="right"  type="text" id="subjectId" value=""> 
 	<br/>
 	<br/>
 	<br/>
 	<select name="type" id="interface" >
-		<option name="phase 1" value="1">Plain</option>
-		<option name="phase 2" value="2">Random</option>
-		<option name="phase 3" value="3">User-Selected</option> 
-		<option name="phase 3" value="4">Automatic label</option> 
-		<option name="phase 3" value="5">User label</option> 
+		<option name="phase 1" value="1">Plain Bookmarks</option>
+		<option name="phase 2" value="2">Random Icon Bookmarks</option>
+		<option name="phase 3" value="3">User-defined Icons Bookmarks</option> 
+		<option name="phase 3" value="4">Generic text bookmarks</option> 
+		<option name="phase 3" value="5">User-defined text Bookmarks</option> 
 	</select> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
 	<br/><br/><br/>
 	<select name="type" id="phase" >
