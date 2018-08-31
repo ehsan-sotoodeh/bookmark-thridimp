@@ -55,7 +55,7 @@ $(document).ready(function(){
 		case "autolabel": // user Picked icons
 		case "userlabel": // user Picked icons
 			
-			$("#bookmarklist").show();
+			//$("#bookmarklist").show();
 		break;
 	}
 	document.cookie = "ScreenShot=-1";
@@ -225,7 +225,7 @@ $(document).ready(function(){
 	
 	
 
-	
+		
 	
 
 });
@@ -731,12 +731,16 @@ function appendBookmark(id){
 			selectIcon(id);
 		break;
 		case "autolabel": // user Picked icons
+			$("#scroll2").append("<div id='bm"+id+"' class='bookmark orangeBc' >"+""+"</div>");
+
 			placeLable(id,true);
 			bookmarked = true;
 			pauseTimer = false;
 
 		break;
 		case "userlabel": // user Picked icons
+			$("#scroll2").append("<div id='bm"+id+"' class='bookmark orangeBc' >"+""+"</div>");
+
 			placeLable(id,false);
 
 		break;
@@ -770,6 +774,7 @@ function selectIcon(id){
 	//iconMenuTimerActive = true;
 	iconMenuTimer = setInterval(function(){ 
 		iconMenuTimePassed += 10;
+
 		showTimer2();
 	},10);
 
@@ -779,7 +784,12 @@ function selectIcon(id){
 
 function enterLable(){
 	labelDialogue = swal("Enter a label", {
-	  content: "input",
+		content: "input",
+		  inputAttributes: {
+			maxlength: 10,
+			autocapitalize: 'off',
+			autocorrect: 'off'
+		  }
 	})
 	.then((value) => {
 		//swal(`You typed: ${value}`);
@@ -787,6 +797,7 @@ function enterLable(){
 			enterLable();
 		}else{
 			userLabelArray.push({"value":value,"time":iconMenuTimePassed,"id":id});
+			$("#bm"+id).html(value)
 			clearInterval(iconMenuTimer);
 			bookmarked = true;
 			updateBookmarkList();
@@ -849,10 +860,14 @@ function gotoLabel(id,obj){
 	
 }
 function showTimer(){
+
+	if($(".swal-content input").val().length > 10){
+		temp = $(".swal-content input").val();
+		$(".swal-content input").val(temp.substr(0,10));
+	}
 	if(Number.isInteger(iconMenuTimePassed/1000)){
 		timePassed = iconMenuTimePassed/1000 ;
 		timeRemained = TIME_TO_CHOSE_ICON - timePassed;
-	
 		if(timeRemained < 0){
 			$(".swal-text").text("Please Select a Label");
 			$(".swal-text").css("color","red");
@@ -1355,5 +1370,5 @@ function getCookie(cname) {
 
 
 function openBookmarkList(){
-	$("#bookmarklist").show();
+	//$("#bookmarklist").show();
 }
