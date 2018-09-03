@@ -137,7 +137,7 @@ $(document).ready(function(){
 				
 				break;*/
  			case 70: //f
-/*  				console.log("main :" + $(".main").css("margin-top"));
+  				console.log("main :" + $(".main").css("margin-top"));
 				console.log("index :" + $("#secondScrollIndex").css("top"));
 				str = "main :" + $(".main").css("margin-top") + "<br/>";
 				str += "index :" + $("#secondScrollIndex").css("top");
@@ -146,7 +146,7 @@ $(document).ready(function(){
 				
 					currentBookmark++;
 					appendBookmark(currentBookmark);
-					$("#bm"+currentBookmark).css({"top":$("#secondScrollIndex").css("top")});  */
+					$("#bm"+currentBookmark).css({"top":$("#secondScrollIndex").css("top")});  
 					
 				
 			break;  
@@ -231,7 +231,7 @@ $(document).ready(function(){
 });
 
 function scrollThePage(direction){
-	return;
+	//return;
 	dir = "";
 	if(direction){
 		dir = "U";
@@ -1068,12 +1068,14 @@ function getPhaseData(phase){
 				learningSessionArray.push(bookmarksArray[6]);
 				learningSessionArray.push(bookmarksArray[9]);
 				learningSessionArray.push(bookmarksArray[12]);
+				learningSessionArray.push(bookmarksArray[15]);
 	
 				testSessionArray.push(bookmarksArray[0]);
 				testSessionArray.push(bookmarksArray[3]);
 				testSessionArray.push(bookmarksArray[6]);
 				testSessionArray.push(bookmarksArray[9]);
 				testSessionArray.push(bookmarksArray[12]);
+				testSessionArray.push(bookmarksArray[15]);
 
 				
 			break;
@@ -1083,18 +1085,21 @@ function getPhaseData(phase){
 				learningSessionArray.push(bookmarksArray[7]);
 				learningSessionArray.push(bookmarksArray[10]);
 				learningSessionArray.push(bookmarksArray[13]);
+				learningSessionArray.push(bookmarksArray[16]);
 
 				testSessionArray.push(bookmarksArray[0]);
 				testSessionArray.push(bookmarksArray[3]);
 				testSessionArray.push(bookmarksArray[6]);
 				testSessionArray.push(bookmarksArray[9]);
 				testSessionArray.push(bookmarksArray[12]);
+				testSessionArray.push(bookmarksArray[15]);
 				
 				testSessionArray.push(bookmarksArray[1]);
 				testSessionArray.push(bookmarksArray[4]);
 				testSessionArray.push(bookmarksArray[7]);
 				testSessionArray.push(bookmarksArray[10]);
 				testSessionArray.push(bookmarksArray[13]);
+				testSessionArray.push(bookmarksArray[16]);
 				
 
 			break;
@@ -1104,24 +1109,28 @@ function getPhaseData(phase){
 				learningSessionArray.push(bookmarksArray[8]);
 				learningSessionArray.push(bookmarksArray[11]);
 				learningSessionArray.push(bookmarksArray[14]);
+				learningSessionArray.push(bookmarksArray[17]);
 
 				testSessionArray.push(bookmarksArray[0]);
 				testSessionArray.push(bookmarksArray[3]);
 				testSessionArray.push(bookmarksArray[6]);
 				testSessionArray.push(bookmarksArray[9]);
 				testSessionArray.push(bookmarksArray[12]);
+				testSessionArray.push(bookmarksArray[15]);
 				
 				testSessionArray.push(bookmarksArray[1]);
 				testSessionArray.push(bookmarksArray[4]);
 				testSessionArray.push(bookmarksArray[7]);
 				testSessionArray.push(bookmarksArray[10]);
 				testSessionArray.push(bookmarksArray[13]);
+				testSessionArray.push(bookmarksArray[16]);
 				
 				testSessionArray.push(bookmarksArray[2]);
 				testSessionArray.push(bookmarksArray[5]);
 				testSessionArray.push(bookmarksArray[8]);
 				testSessionArray.push(bookmarksArray[11]);
 				testSessionArray.push(bookmarksArray[14]);
+				testSessionArray.push(bookmarksArray[17]);
 				
 
 
@@ -1145,23 +1154,26 @@ function setBookmarksArray(){
 		case "plain":
 			bookmarksArray = new Array(
 				
-				{id:0 , p :13800 , index:25 , i:true,d:"H"},
-				{id:1 , p :30600 , index:83, i:false,d:"H"},
-				{id:2 , p :94050 , index:141 , i:true,d:"H"},
-				{id:3 , p :58800 , index:199 , i:false,d:"H"},
-				{id:4 , p :37800 , index:257 , i:true,d:"H"},
-				{id:5 , p :26850 , index:316 , i:false,d:"H"},
-				{id:6 , p :73200 , index:374 , i:true,d:"H"},
-				{id:7 , p :76350 , index:432 , i:false,d:"H"},
-				{id:8 , p :18150 , index:490 , i:true,d:"H"},
-				{id:9 , p :66900 , index:548 , i:true,d:"H"},
-				{id:10 , p :35400 , index:607 , i:true,d:"H"},
-				{id:11 , p :43500 , index:665 , i:true,d:"H"},
-				{id:12 , p :24750 , index:723 , i:false,d:"H"},
-				{id:13 , p :90150 , index:781 , i:true,d:"H"},
-				{id:14 , p :3150 , index:839 , i:false,d:"H"},
-				{id:15 , p :27900 , index:400 , i:true,d:"H"},
-				{id:16 , p :87750 , index:500 , i:false,d:"H"},
+				{id:0 , p :13800 , index:25 , i:"p" ,d:"H"}, //
+				{id:1 , p :30600 , index:83, i:"t",d:"H"},
+				{id:2 , p :94050 , index:141 , i:"p",d:"H"},
+				{id:3 , p : 57900 , index:199 , i:"n",d:"H"}, //
+				{id:4 , p :37800 , index:257 , i:"p",d:"H"},
+				{id:5 , p :26850 , index:316 , i:"t",d:"H"},
+				{id:6 , p :73200 , index:374 , i:"p",d:"H"}, //
+				{id:7 , p :76350 , index:432 , i:"t",d:"H"},
+				{id:8 , p : 11550 , index:490 , i:"n",d:"H"},
+				{id:9 , p :58800 , index:548 , i:"t",d:"H"},
+				{id:10 , p :36000 , index:607 , i:"n",d:"H"},
+				{id:11 , p :3150  , index:665 , i:"t",d:"H"},
+				{id:12 , p :24750 , index:723 , i:"t",d:"H"},
+				{id:13 , p :90150 , index:781 , i:"p",d:"H"},
+				{id:14 , p :49050 , index:839 , i:"n",d:"H"},
+				{id:15 , p :4950 , index:859 , i:"n",d:"H"},
+				{id:16 , p :9000 , index:879 , i:"n",d:"H"},
+				{id:17 , p :18150  , index:899 , i:"p",d:"H"},
+				{id:18 , p :27900 , index:400 , i:"p",d:"H"},
+				{id:19 , p :87750 , index:500 , i:"t",d:"H"},
 					
 
 
@@ -1174,23 +1186,26 @@ function setBookmarksArray(){
 		break;
 		case "randomIcon":
 			bookmarksArray = new Array(
-				{id:0 , p :100650 , index:25 , i:true,d:"H"},
-				{id:1 , p :80550 , index:83, i:true,d:"H"},
-				{id:2 , p :3600 , index:141 , i:false,d:"H"},
-				{id:3 , p :58500 , index:199 , i:false,d:"H"},
-				{id:4 , p : 56850 , index:  257, i:false,d:"H"},
-				{id:5 , p :61800 , index:316 , i:false,d:"H"},
-				{id:6 , p :37200 , index:374 , i:true,d:"H"},
-				{id:7 , p :88500 , index:432 , i:true,d:"H"},
-				{id:8 , p :114300 , index:490 , i:true,d:"H"},
-				{id:9 , p :51000 , index:548 , i:false,d:"H"},
-				{id:10 , p :138300 , index:607 , i:true,d:"H"},
-				{id:11 , p :76350 , index:665 , i:true,d:"H"},
-				{id:12 , p :20250 , index: 723, i:true ,d:"H"},
-				{id:13 , p :60450 , index:781 , i:false,d:"H"},
-				{id:14 , p :78750 , index:839 , i:true,d:"H"},
-				{id:15 , p :74700 , index:400 , i:true,d:"H"},
-				{id:16 , p :72000 , index:500 , i:false,d:"H"},
+				{id:0 , p :100650 , index:25 , i:true,d:"H"}, 
+				{id:1 , p :80550 , index:83, i:true,d:"H"}, //
+				{id:2 , p :3600 , index:141 , i:false,d:"H"}, //
+				{id:3 , p :58500 , index:199 , i:false,d:"H"}, //
+				{id:4 , p : 56850 , index:  257, i:false,d:"H"}, //
+				{id:5 , p :61800 , index:316 , i:false,d:"H"}, 
+				{id:6 , p :37200 , index:374 , i:true,d:"H"}, 
+				{id:7 , p :88500 , index:432 , i:true,d:"H"}, //
+				{id:8 , p :114300 , index:490 , i:true,d:"H"}, //
+				{id:9 , p :51000 , index:548 , i:false,d:"H"}, 
+				{id:10 , p :138300 , index:607 , i:true,d:"H"}, //
+				{id:11 , p :76350 , index:665 , i:true,d:"H"}, //
+				{id:12 , p :20250 , index: 723, i:true ,d:"H"}, //
+				{id:13 , p :60450 , index:781 , i:false,d:"H"}, //
+				{id:14 , p :78750 , index:839 , i:true,d:"H"}, //
+				{id:15 , p :78750 , index:839 , i:true,d:"H"}, 
+				{id:16 , p :78750 , index:839 , i:true,d:"H"}, 
+				{id:17 , p :78750 , index:839 , i:true,d:"H"}, 
+				{id:18 , p :74700 , index:400 , i:true,d:"H"}, 
+				{id:19 , p :72000 , index:500 , i:false,d:"H"},
 				
 				// 4 -> 12
 				
