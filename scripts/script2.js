@@ -1154,26 +1154,26 @@ function setBookmarksArray(){
 		case "plain":
 			bookmarksArray = new Array(
 				
-				{id:0 , p :13800 , index:25 , i:"p" ,d:"H"}, //
-				{id:1 , p :30600 , index:83, i:"t",d:"H"},
-				{id:2 , p :94050 , index:141 , i:"p",d:"H"},
-				{id:3 , p : 57900 , index:199 , i:"n",d:"H"}, //
-				{id:4 , p :37800 , index:257 , i:"p",d:"H"},
-				{id:5 , p :26850 , index:316 , i:"t",d:"H"},
-				{id:6 , p :73200 , index:374 , i:"p",d:"H"}, //
-				{id:7 , p :76350 , index:432 , i:"t",d:"H"},
-				{id:8 , p : 11550 , index:490 , i:"n",d:"H"},
-				{id:9 , p :58800 , index:548 , i:"t",d:"H"},
-				{id:10 , p :36000 , index:607 , i:"n",d:"H"},
-				{id:11 , p :3150  , index:665 , i:"t",d:"H"},
-				{id:12 , p :24750 , index:723 , i:"t",d:"H"},
-				{id:13 , p :90150 , index:781 , i:"p",d:"H"},
-				{id:14 , p :49050 , index:839 , i:"n",d:"H"},
-				{id:15 , p :4950 , index:859 , i:"n",d:"H"},
-				{id:16 , p :9000 , index:879 , i:"n",d:"H"},
-				{id:17 , p :18150  , index:899 , i:"p",d:"H"},
-				{id:18 , p :27900 , index:400 , i:"p",d:"H"},
-				{id:19 , p :87750 , index:500 , i:"t",d:"H"},
+				{id:0 , p :13800 , index:25 , i:"p" }, //
+				{id:1 , p :30600 , index:83, i:"t"},
+				{id:2 , p :94050 , index:141 , i:"p"},
+				{id:3 , p : 57900 , index:199 , i:"n"}, //
+				{id:4 , p :37800 , index:257 , i:"p"},
+				{id:5 , p :26850 , index:316 , i:"t"},
+				{id:6 , p :73200 , index:374 , i:"p"}, //
+				{id:7 , p :76350 , index:432 , i:"t"},
+				{id:8 , p : 11550 , index:490 , i:"n"},
+				{id:9 , p :58800 , index:548 , i:"t"},
+				{id:10 , p :36000 , index:607 , i:"n"},
+				{id:11 , p :3150  , index:665 , i:"t"},
+				{id:12 , p :24750 , index:723 , i:"t"},
+				{id:13 , p :90150 , index:781 , i:"p"},
+				{id:14 , p :49050 , index:839 , i:"n"},
+				{id:15 , p :4950 , index:859 , i:"n"},
+				{id:16 , p :9000 , index:879 , i:"n"},
+				{id:17 , p :18150  , index:899 , i:"p"},
+				{id:18 , p :27900 , index:400 , i:"p"},
+				{id:19 , p :87750 , index:500 , i:"t"},
 					
 
 
@@ -1186,26 +1186,59 @@ function setBookmarksArray(){
 		break;
 		case "randomIcon":
 			bookmarksArray = new Array(
-				{id:0 , p :100650 , index:25 , i:true,d:"H"}, 
-				{id:1 , p :80550 , index:83, i:true,d:"H"}, //
-				{id:2 , p :3600 , index:141 , i:false,d:"H"}, //
-				{id:3 , p :58500 , index:199 , i:false,d:"H"}, //
-				{id:4 , p : 56850 , index:  257, i:false,d:"H"}, //
-				{id:5 , p :61800 , index:316 , i:false,d:"H"}, 
-				{id:6 , p :37200 , index:374 , i:true,d:"H"}, 
-				{id:7 , p :88500 , index:432 , i:true,d:"H"}, //
-				{id:8 , p :114300 , index:490 , i:true,d:"H"}, //
-				{id:9 , p :51000 , index:548 , i:false,d:"H"}, 
-				{id:10 , p :138300 , index:607 , i:true,d:"H"}, //
-				{id:11 , p :76350 , index:665 , i:true,d:"H"}, //
-				{id:12 , p :20250 , index: 723, i:true ,d:"H"}, //
-				{id:13 , p :60450 , index:781 , i:false,d:"H"}, //
-				{id:14 , p :78750 , index:839 , i:true,d:"H"}, //
-				{id:15 , p :78750 , index:839 , i:true,d:"H"}, 
-				{id:16 , p :78750 , index:839 , i:true,d:"H"}, 
-				{id:17 , p :78750 , index:839 , i:true,d:"H"}, 
-				{id:18 , p :74700 , index:400 , i:true,d:"H"}, 
-				{id:19 , p :72000 , index:500 , i:false,d:"H"},
+				
+				{id:0 , p :80550 , index:25 , i:"p" }, 
+				{id:1 , p :3600 , index:83, i:"t"},
+				{id:2 , p :37200 , index:141 , i:"p"},
+				{id:3 , p : 59700 , index:199 , i:"n"}, 
+				
+				{id:4 , p :88500 , index:257 , i:"p"},
+				{id:5 , p :61800 , index:316 , i:"t"},				
+				{id:6 , p :76350 , index:374 , i:"p"}, 
+				{id:7 , p :58500 , index:432 , i:"t"},
+				
+				{id:8 , p : 19350 , index:490 , i:"n"},
+				
+				{id:9 , p :56850 , index:548 , i:"t"},
+				
+				{id:10 , p :47250 , index:607 , i:"n"},
+				
+				{id:11 , p :61800  , index:665 , i:"t"},
+				{id:12 , p :51000 , index:723 , i:"t"},
+				
+				{id:13 , p :138300 , index:781 , i:"p"},
+				
+				{id:14 , p :138900 , index:839 , i:"n"},
+				{id:15 , p :5850 , index:859 , i:"n"},
+				{id:16 , p :49050 , index:879 , i:"n"},
+				
+				{id:17 , p :20250  , index:899 , i:"p"},	
+				{id:18 , p :74700 , index:400 , i:"p"}, //
+				{id:19 , p :72000 , index:500 , i:"t"}, //
+			
+			
+			
+			
+				//{id:0 , p :100650 , index:25 , i:true}, 
+				//{id:1 , p :80550 , index:83, i:true}, //
+				//{id:2 , p :3600 , index:141 , i:false}, //
+				//{id:3 , p :58500 , index:199 , i:false}, //
+				//{id:4 , p : 56850 , index:  257, i:false}, //
+				//{id:5 , p :61800 , index:316 , i:false}, 
+				//{id:6 , p :37200 , index:374 , i:true}, 
+				//{id:7 , p :88500 , index:432 , i:true}, //
+				//{id:8 , p :114300 , index:490 , i:true}, //
+				//{id:9 , p :51000 , index:548 , i:false}, 
+			//	{id:10 , p :138300 , index:607 , i:true}, //
+				//{id:11 , p :76350 , index:665 , i:true}, //
+				//{id:12 , p :20250 , index: 723, i:true }, //
+				//{id:13 , p :60450 , index:781 , i:false}, //
+				//{id:14 , p :78750 , index:839 , i:true}, //
+				//{id:15 , p :78750 , index:839 , i:true}, 
+				//{id:16 , p :78750 , index:839 , i:true}, 
+				//{id:17 , p :78750 , index:839 , i:true}, 
+				//{id:18 , p :74700 , index:400 , i:true}, 
+				//{id:19 , p :72000 , index:500 , i:false},
 				
 				// 4 -> 12
 				
@@ -1218,23 +1251,23 @@ function setBookmarksArray(){
 		case "userselectedIcon":
 			bookmarksArray = new Array(
 			
-				{id:0 , p :9000 , index:25 , i:true,d:"H"},
-				{id:1 , p :300 , index:83, i:false,d:"H"},
-				{id:2 , p :3600 , index:141 , i:true,d:"H"},
-				{id:3 , p :2100 , index:199 , i:true,d:"H"},
-				{id:4 , p :26850 , index:257 , i:false,d:"H"},
-				{id:5 , p :46650 , index:316 , i:false,d:"H"},
-				{id:6 , p :4950 , index:374 , i:true,d:"H"},
-				{id:7 , p :21750 , index:432 , i:true,d:"H"},
-				{id:8 , p :  43500, index:490  , i:false ,d:"H"},
-				{id:9 , p :60300 , index:548 , i:true,d:"H"},
-				{id:10 , p :11550 , index:607 , i:true,d:"H"},
-				{id:11 , p :34200 , index:665 , i:false,d:"H"},
-				{id:12 , p :32250 , index: 723, i:false,d:"H"},
-				{id:13 , p :41850 , index:781 , i:true,d:"H"},
-				{id:14 , p :138900 , index:839 , i:true,d:"H"},
-				{id:15 , p :85350 , index:400 , i:true,d:"H"},
-				{id:16 , p :88200 , index:500 , i:false,d:"H"},
+				{id:0 , p :9000 , index:25 , i:true},
+				{id:1 , p :300 , index:83, i:false},
+				{id:2 , p :3600 , index:141 , i:true},
+				{id:3 , p :2100 , index:199 , i:true},
+				{id:4 , p :26850 , index:257 , i:false},
+				{id:5 , p :46650 , index:316 , i:false},
+				{id:6 , p :4950 , index:374 , i:true},
+				{id:7 , p :21750 , index:432 , i:true},
+				{id:8 , p :  43500, index:490  , i:false },
+				{id:9 , p :60300 , index:548 , i:true},
+				{id:10 , p :11550 , index:607 , i:true},
+				{id:11 , p :34200 , index:665 , i:false},
+				{id:12 , p :32250 , index: 723, i:false},
+				{id:13 , p :41850 , index:781 , i:true},
+				{id:14 , p :138900 , index:839 , i:true},
+				{id:15 , p :85350 , index:400 , i:true},
+				{id:16 , p :88200 , index:500 , i:false},
 				
 				// 9 - > 8 
 				
@@ -1245,23 +1278,23 @@ function setBookmarksArray(){
 		break;
 		case "autolabel":
 			bookmarksArray = new Array(
-					{id:0 , p :32400 , index:25 , i:false,d:"H"},
-					{id:1 , p : 3150 , index:83, i:true,d:"H"},
-					{id:2 , p : 8250  , index:141 , i:true,d:"H"},
-					{id:3 , p : 4800 , index:199 , i:false,d:"H"},
-					{id:4 , p :10200 , index:257 , i:true,d:"H"},
-					{id:5 , p :37050 , index:316 , i:false,d:"H"},
-					{id:6 , p :11400 , index:374 , i:true,d:"H"},
-					{id:7 , p :43500 , index:432 , i:false,d:"H"},
-					{id:8 , p :15300 , index:490 , i:true,d:"H"},
-					{id:9 , p :21900 , index:548 , i:true,d:"H"},
-					{id:10 , p :47250 , index:607 , i:false,d:"H"},
-					{id:11 , p :85500 , index:665 , i:false,d:"H"},
-					{id:12 , p :26250 , index:723 , i:true,d:"H"},
-					{id:13 , p :34200 , index:781 , i:true,d:"H"},
-					{id:14 , p :29550 , index:839 , i:true,d:"H"},
-					{id:15 , p :117450 , index:400 , i:true,d:"H"},
-					{id:16 , p :121050 , index:500 , i:false,d:"H"},
+					{id:0 , p :32400 , index:25 , i:false},
+					{id:1 , p : 3150 , index:83, i:true},
+					{id:2 , p : 8250  , index:141 , i:true},
+					{id:3 , p : 4800 , index:199 , i:false},
+					{id:4 , p :10200 , index:257 , i:true},
+					{id:5 , p :37050 , index:316 , i:false},
+					{id:6 , p :11400 , index:374 , i:true},
+					{id:7 , p :43500 , index:432 , i:false},
+					{id:8 , p :15300 , index:490 , i:true},
+					{id:9 , p :21900 , index:548 , i:true},
+					{id:10 , p :47250 , index:607 , i:false},
+					{id:11 , p :85500 , index:665 , i:false},
+					{id:12 , p :26250 , index:723 , i:true},
+					{id:13 , p :34200 , index:781 , i:true},
+					{id:14 , p :29550 , index:839 , i:true},
+					{id:15 , p :117450 , index:400 , i:true},
+					{id:16 , p :121050 , index:500 , i:false},
 					
 					
 					//  0 - > 1 * 1 -> 2
@@ -1276,23 +1309,23 @@ function setBookmarksArray(){
 		break;
 		case "userlabel":
 			bookmarksArray = new Array(
-					{id:0 , p :2550 , index:25 , i:false,d:"H"},
-					{id:1 , p :3450 , index:83, i:true,d:"H"},
-					{id:2 , p :40200 , index:141 , i:true,d:"H"},
-					{id:3 , p :22650 , index:199 , i:true,d:"H"},
-					{id:4 , p :7050 , index:257 , i:false,d:"H"},
-					{id:5 , p :16200 , index:316 , i:true,d:"H"},
-					{id:6 , p :8400 , index:374 , i:true,d:"H"},
-					{id:7 , p :18150 , index:432 , i:false,d:"H"},
-					{id:8 , p :5400  , index:490 , i:true,d:"H"},
-					{id:9 , p :11250 , index:548 , i:false,d:"H"},
-					{id:10 , p :35850 , index:607 , i:true,d:"H"},
-					{id:11 , p :17400 , index:665 , i:false,d:"H"},
-					{id:12 , p :10350 , index:723 , i:true,d:"H"},
-					{id:13 , p :12300  , index:781 , i:true ,d:"H"},
-					{id:14 , p : 4650 , index:839 , i:false,d:"H"},
-					{id:15 , p :41850 , index:400 , i:true,d:"H"},
-					{id:16 , p :45150 , index:500 , i:false,d:"H"},
+					{id:0 , p :2550 , index:25 , i:false},
+					{id:1 , p :3450 , index:83, i:true},
+					{id:2 , p :40200 , index:141 , i:true},
+					{id:3 , p :22650 , index:199 , i:true},
+					{id:4 , p :7050 , index:257 , i:false},
+					{id:5 , p :16200 , index:316 , i:true},
+					{id:6 , p :8400 , index:374 , i:true},
+					{id:7 , p :18150 , index:432 , i:false},
+					{id:8 , p :5400  , index:490 , i:true},
+					{id:9 , p :11250 , index:548 , i:false},
+					{id:10 , p :35850 , index:607 , i:true},
+					{id:11 , p :17400 , index:665 , i:false},
+					{id:12 , p :10350 , index:723 , i:true},
+					{id:13 , p :12300  , index:781 , i:true },
+					{id:14 , p : 4650 , index:839 , i:false},
+					{id:15 , p :41850 , index:400 , i:true},
+					{id:16 , p :45150 , index:500 , i:false},
 					
 					// 8 - > 9 * 9 -> 10
 					// 13 - 14 * 14 - 15
