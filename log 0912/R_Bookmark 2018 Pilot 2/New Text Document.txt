@@ -1,0 +1,11 @@
+	Pairwise comparisons using t tests with pooled SD 
+
+data:  ctData.df$ct and ctData.df$cond 
+
+         autolabel plain   randicon uicon
+plain    6.9e-07   -       -        -    
+randicon 0.111     2.9e-14 -        -    
+uicon    0.901     1.6e-11 1.000    -    
+ulabel   4.6e-05   < 2e-16 0.403    0.038
+
+P value adjustment method: bonferroni

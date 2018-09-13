@@ -4,7 +4,7 @@ if(isset($_POST['subjectId'])){
 //var_dump($_POST);
 	$conn = connectToDb();
 		
-	$sql = "INSERT INTO loggertable ( subjectNumber, log) VALUES (:subjectNumber,:log)";
+	$sql = "INSERT INTO loggertable2 ( subjectNumber, log) VALUES (:subjectNumber,:log)";
 
 	//Prepare our statement.
 	$statement = $conn->prepare($sql);

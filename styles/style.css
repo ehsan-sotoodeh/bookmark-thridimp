@@ -29,7 +29,7 @@ body{
 }
 
 .iconContainer{
-	min-width:52px;
+	min-width:50px;
 	height:98%;
 	float:right;
 		user-drag: none; 
@@ -81,7 +81,7 @@ body{
 }
 
 .bookmark{
-	width: 51px;
+	width: 50px;
     min-height: 20px;
     position: absolute;
     top: 0px;
@@ -91,7 +91,7 @@ body{
     overflow-y: visible;
     overflow-wrap: break-word;
     line-height: 12px;
-	
+	font-size: 13px;
 	
 }
 
@@ -368,4 +368,7 @@ p{
 	overflow-y: hidden
 }
 
+.bselected{
+	border: 3px #ff002d solid;
+}
 

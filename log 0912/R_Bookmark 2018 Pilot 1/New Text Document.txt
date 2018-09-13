@@ -1,0 +1,4 @@
+> ct_anovaErr
+$ANOVA
+  Effect DFn DFd    SSn      SSd        F          p p<.05       ges
+1   cat2   3  12 2.0225 3.046667 2.655361 0.09598394       0.3989808
