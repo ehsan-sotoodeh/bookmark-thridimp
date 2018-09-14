@@ -28,7 +28,7 @@ levelTest
 # calculate summary stats - 
 #========================================
 
-ctSummary.df <- ddply(subset(ctData.df,select=c("cond","phase","blk", "ct")), .(cond,phase), summarize, mean = round(mean(ct),2), sd = round(sd(ct),2), se = round(sd(ct)/sqrt(length(ct)),2))
+ctSummary.df <- ddply(subset(ctData.df,select=c("cond","phase","blk", "ct")), .(cond,phase,blk), summarize, mean = round(mean(ct),2), sd = round(sd(ct),2), se = round(sd(ct)/sqrt(length(ct)),2))
 ctSummary.df
 
 ctSummary.df <- ddply(subset(ctData.df,select=c("cond","phase","blk", "ct")), .(cond,blk), summarize, mean = round(mean(ct),2), sd = round(sd(ct),2), se = round(sd(ct)/sqrt(length(ct)),2))
